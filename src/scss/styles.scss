@@ -1,0 +1,18 @@
+// Variable declarations
+$heading-font: 'Roboto Condensed', sans-serif;
+$text-font: 'Roboto', sans-serif;
+
+// Base rules
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  padding: 10px;
+  background-color: #9b59c8;
+}
+
+h1 {
+  font-family: $heading-font;
+}
