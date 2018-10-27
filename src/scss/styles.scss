@@ -19,6 +19,14 @@ header, footer {
   background-color: $dustkid-purple;
 }
 
+footer {
+  text-align: center;
+}
+
+footer > p {
+  color: white;
+}
+
 h1, h2, h3, p, blockquote, cite {
   font-family: $text-font;
 }
@@ -160,6 +168,14 @@ button {
   width: auto;
 
   margin-left: 5px;
+}
+
+.important-text {
+  font-weight: bold;
+}
+
+.footer-link {
+  color: white;
 }
 // End module rules
 
