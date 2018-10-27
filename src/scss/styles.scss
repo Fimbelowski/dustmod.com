@@ -134,6 +134,11 @@ button {
   margin: 30px 0;
 }
 
+os-choice-option {
+  display: flex;
+  flex-direction: column;
+}
+
 .os-btn {
   display: flex;
   flex-direction: column;
@@ -141,6 +146,8 @@ button {
 
   width: 200px;
   height: 250px;
+
+  margin-bottom: 20px;
 
   background-color: #9a9a9a6b;
 
