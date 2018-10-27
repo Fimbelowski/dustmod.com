@@ -78,7 +78,7 @@ button {
 .l-os-choices {
   margin-top: 0;
   opacity: 1;
-  max-height: 9999px;
+  max-height: 600px; // Rough element height
 
   transition-property: all;
   transition-duration: 0.3s;
@@ -181,7 +181,6 @@ button {
 
 // State rules
 .is-hidden {
-  margin-top: -40px;
   opacity: 0;
   max-height: 0;
 }
