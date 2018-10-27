@@ -63,6 +63,10 @@ cite::before {
 
 button {
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 [v-cloak] {
@@ -208,5 +212,14 @@ button {
 .is-hidden {
   opacity: 0;
   max-height: 0;
+}
+
+.is-focused {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.is-unfocused {
+  filter: opacity(.5);
 }
 // End state rules

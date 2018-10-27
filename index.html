@@ -38,12 +38,12 @@ the nearly unlimited content that Dustforce and the surrounding community offers
     <section>
       <div class='section-inner'>
         <div class='l-download' id='l-download'>
-          <button type='button' class='download-btn' @click="showChoices">Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
+          <button type='button' class='download-btn' @click="showOSChoices">Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
           <div v-cloak class='l-os-choices' :class='{ "is-hidden": choicesAreHidden }'>
             <h2>Choose Your Operating System</h2>
             <div class='os-choice'>
               <div class='os-choice-option'>
-                <button type='button' class='os-btn'>
+                <button type='button' class='os-btn' :class='{ "is-focused": windowsIsFocused, "is-unfocused": !windowsIsFocused }' @click='focusOSChoice("windows")'>
                   <h2>Windows</h2>
                   <img src='dist/images/windows-logo.png' class='os-choice-img'>
                 </button>
@@ -65,7 +65,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
                 </div>
               </div>
               <div class='os-choice-option'>
-                <button type='button' class='os-btn'>
+                <button type='button' class='os-btn' :class='{ "is-focused": macIsFocused, "is-unfocused": !macIsFocused }' @click='focusOSChoice("mac")'>
                   <h2>Mac OSX</h2>
                   <img src='dist/images/apple-logo.png' class='os-choice-img'>
                 </button>
@@ -75,7 +75,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
                 </div>
               </div>
               <div class='os-choice-option'>
-                <button type='button' class='os-btn'>
+                <button type='button' class='os-btn' :class='{ "is-focused": linuxIsFocused, "is-unfocused": !linuxIsFocused }' @click='focusOSChoice("linux")'>
                   <h2>Linux</h2>
                   <img src='dist/images/linux-logo.png' class='os-choice-img'>
                 </button>
