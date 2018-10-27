@@ -1,0 +1,1 @@
+window.onload=function(){new Vue({el:"#l-download",data:{choicesAreHidden:!0},methods:{showChoices:function(){this.choicesAreHidden=!1}}})};

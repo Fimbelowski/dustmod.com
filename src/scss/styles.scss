@@ -19,14 +19,14 @@ header, footer {
   background-color: $dustkid-purple;
 }
 
+h1, h2, h3, p, blockquote, cite {
+  font-family: $text-font;
+}
+
 h1 {
   font-family: $heading-font;
   font-size: 2em;
   margin: 0;
-}
-
-p, blockquote, cite {
-  font-family: $text-font;
 }
 
 blockquote {
@@ -59,13 +59,22 @@ button {
 // End base rules
 
 // Layout rules
-.l-about {
-}
-
 .l-download {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  text-align: center;
+}
+
+.l-os-choices {
+  margin-top: 0;
+  opacity: 1;
+  max-height: 9999px;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 // End layout rules
 
@@ -89,7 +98,7 @@ button {
 
   width: 250px;
   height: 60px;
-  margin: 0 auto;
+  margin: 10px auto;
 
   border: none;
   border-radius: 10px;
@@ -155,4 +164,9 @@ button {
 // End module rules
 
 // State rules
+.is-hidden {
+  margin-top: -40px;
+  opacity: 0;
+  max-height: 0;
+}
 // End state rules
