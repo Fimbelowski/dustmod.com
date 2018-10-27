@@ -64,6 +64,10 @@ cite::before {
 button {
   cursor: pointer;
 }
+
+[v-cloak] {
+  display: none;
+}
 // End base rules
 
 // Layout rules
@@ -134,9 +138,11 @@ button {
   margin: 30px 0;
 }
 
-os-choice-option {
+.os-choice-option {
   display: flex;
   flex-direction: column;
+
+  max-width: 200px;
 }
 
 .os-btn {
@@ -175,6 +181,18 @@ os-choice-option {
   width: auto;
 
   margin-left: 5px;
+}
+
+.dl-subsection {
+  padding: 1px 5px;
+  margin: 4px 0;
+
+  background-color: #d4d4d487;
+}
+
+.dl-subsection-note {
+  margin: 0.25em 0;
+  color: #444;
 }
 
 .important-text {
