@@ -165,8 +165,8 @@ button {
 
   box-shadow: 0 0 14px -2px #000;
 
-  transition: transform 0.2s,
-              box-shadow 0.2s;
+  transition-property: all;
+  transition-duration: 0.3s;
 
   &:hover {
     box-shadow: 0 0 14px -2px #000;
@@ -188,10 +188,15 @@ button {
 }
 
 .dl-subsection {
+  max-height: 150px; // Approximate element height
+
   padding: 1px 5px;
   margin: 4px 0;
 
   background-color: #d4d4d487;
+
+  transition-property: all;
+  transition-duration: 0.3s;
 }
 
 .dl-subsection-note {
@@ -219,7 +224,7 @@ button {
   outline: none;
 }
 
-.is-unfocused {
+.is-semi-transparent {
   filter: opacity(.5);
 }
 // End state rules
