@@ -38,7 +38,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
     <section>
       <div class='section-inner'>
         <div class='l-download' id='l-download'>
-          <button type='button' class='download-btn' @click="showOSChoices">Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
+          <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
           <div v-cloak class='l-os-choices' :class='{ "is-hidden": choicesAreHidden }'>
             <h2>Choose Your Operating System</h2>
             <div class='os-choice'>

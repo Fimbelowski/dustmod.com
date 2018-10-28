@@ -2,6 +2,7 @@ window.onload = function() {
   var downloadComponent = new Vue({
     el: '#l-download',
     data: {
+      dlButtonDisabled: false,
       choicesAreHidden: true,
       focusedOS: ''
     },
@@ -28,6 +29,7 @@ window.onload = function() {
     methods: {
       showOSChoices: function() {
         this.choicesAreHidden = false;
+        this.dlButtonDisabled = true;
       },
       focusOSChoice: function(OSToFocus) {
         this.focusedOS = OSToFocus;
