@@ -20,7 +20,7 @@
         <h1 class='header-text'>Dustmod</h1>
       </div>
     </header>
-    <section>
+    <section id='about'>
       <div class='section-inner'>
         <h2>What is Dustmod?</h2>
         <div>
@@ -32,7 +32,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
         </div>
       </div>
     </section>
-    <section>
+    <section id='features'>
       <div class='section-inner'>
         <h2>Features</h2>
         <ul>
@@ -47,16 +47,16 @@ the nearly unlimited content that Dustforce and the surrounding community offers
         </ul>
       </div>
     </section>
-    <section>
+    <section id='download'>
       <div class='section-inner'>
         <div class='l-download' id='l-download'>
           <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
-          <div v-cloak class='l-os-choices' :class='{ "is-hidden": choicesAreHidden }'>
+          <div v-cloak class='os-choices' :class='{ "is-hidden": choicesAreHidden }'>
             <h2>Choose Your Operating System</h2>
             <div class='os-choice'>
               <div class='os-choice-option'>
                 <button type='button' class='os-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
-                  <h2>Windows</h2>
+                  <h3>Windows</h3>
                   <img src='dist/images/windows-logo.png' class='os-choice-img'>
                 </button>
                 <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
@@ -78,7 +78,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
               </div>
               <div class='os-choice-option'>
                 <button type='button' class='os-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-                  <h2>Mac OSX</h2>
+                  <h3>Mac OSX</h3>
                   <img src='dist/images/apple-logo.png' class='os-choice-img'>
                 </button>
                 <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "mac" }'>
@@ -88,7 +88,7 @@ the nearly unlimited content that Dustforce and the surrounding community offers
               </div>
               <div class='os-choice-option'>
                 <button type='button' class='os-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-                  <h2>Linux</h2>
+                  <h3>Linux</h3>
                   <img src='dist/images/linux-logo.png' class='os-choice-img'>
                 </button>
                 <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "linux" }'>
@@ -98,6 +98,13 @@ the nearly unlimited content that Dustforce and the surrounding community offers
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id='installation'>
+      <div class='section-inner'>
+        <h2>Installation</h2>
+        <div class='l-installation'>
         </div>
       </div>
     </section>
