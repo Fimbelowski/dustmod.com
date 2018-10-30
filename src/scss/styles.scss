@@ -23,10 +23,6 @@ footer {
   text-align: center;
 }
 
-footer > p {
-  color: white;
-}
-
 h1, h2, h3, p, blockquote, cite, li {
   font-family: $text-font;
 }
@@ -83,6 +79,20 @@ button {
 // End base rules
 
 // Layout rules
+.l-header {
+
+}
+
+.l-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.l-features {
+
+}
+
 .l-download {
   display: flex;
   flex-direction: column;
@@ -97,6 +107,14 @@ button {
   justify-content: center;
 
   text-align: center;
+}
+
+.l-footer {
+
+}
+
+.l-footer > p {
+  color: white;
 }
 // End layout rules
 

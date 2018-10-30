@@ -1,6 +1,6 @@
 window.onload = function() {
   var downloadComponent = new Vue({
-    el: '#l-download',
+    el: '#download',
     data: {
       dlButtonDisabled: false,
       choicesAreHidden: true,
