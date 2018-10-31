@@ -48,50 +48,48 @@
     <section id='download'>
       <div class='section-inner l-download'>
         <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
-        <div v-cloak class='os-choices' :class='OSChoicesStyleObj'>
-          <h2>Choose Your Operating System</h2>
-          <div class='os-choice'>
-            <div class='os-choice-option'>
-              <button type='button' class='os-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
-                <h3>Windows</h3>
-                <img src='dist/images/windows-logo.png' class='os-choice-img'>
-              </button>
-              <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
-                <p class='dl-subsection-note'>Requires Win10</p>
-                <p class='dl-subsection-note'>(Best Performance)</p>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download><p>DirectX 12 (Steam)</p></a>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download><p>DirectX 12 (DRM-Free)</p></a>
-              </div>
-              <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
-                <p class='dl-subsection-note'>(The same as vanilla Dustforce)</p>
-                <a href='https://dustkid.com/getdustmod/win32_steam' download><p>DirectX 9 (Steam)</p></a>
-                <a href='https://dustkid.com/getdustmod/win32_drmfree' download><p>DirectX 9 (DRM-Free)</p></a>
-              </div>
-              <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
-                <p class='dl-subsection-note'>(OpenGL Based)</p>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload><p>SDL2 (Steam)</p></a>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download><p>SDL2 (DRM-Free)</p></a>
-              </div>
+        <h3 v-cloak :class='OSChoicesStyleObj'>Choose Your Operating System</h2>
+        <div class='os-choice-grid' :class='OSChoicesStyleObj'>
+          <div class='os-choice-option'>
+            <button type='button' class='os-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
+              <h3>Windows</h3>
+              <img src='dist/images/windows-logo.png' class='os-choice-img'>
+            </button>
+            <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
+              <p class='dl-subsection-note'>Requires Win10</p>
+              <p class='dl-subsection-note'>(Best Performance)</p>
+              <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download><p>DirectX 12 (Steam)</p></a>
+              <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download><p>DirectX 12 (DRM-Free)</p></a>
             </div>
-            <div class='os-choice-option'>
-              <button type='button' class='os-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-                <h3>Mac OSX</h3>
-                <img src='dist/images/apple-logo.png' class='os-choice-img'>
-              </button>
-              <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "mac" }'>
-                <a href='https://dustkid.com/getdustmod/osx64_steam' download><p>64-Bit (Steam)</p></a>
-                <a href='https://dustkid.com/getdustmod/osx64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
-              </div>
+            <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
+              <p class='dl-subsection-note'>(The same as vanilla Dustforce)</p>
+              <a href='https://dustkid.com/getdustmod/win32_steam' download><p>DirectX 9 (Steam)</p></a>
+              <a href='https://dustkid.com/getdustmod/win32_drmfree' download><p>DirectX 9 (DRM-Free)</p></a>
             </div>
-            <div class='os-choice-option'>
-              <button type='button' class='os-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-                <h3>Linux</h3>
-                <img src='dist/images/linux-logo.png' class='os-choice-img'>
-              </button>
-              <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "linux" }'>
-                <a href='https://dustkid.com/getdustmod/linux64_steam' download><p>64-Bit (Steam)</p></a>
-                <a href='https://dustkid.com/getdustmod/linux64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
-              </div>
+            <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "windows" }'>
+              <p class='dl-subsection-note'>(OpenGL Based)</p>
+              <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload><p>SDL2 (Steam)</p></a>
+              <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download><p>SDL2 (DRM-Free)</p></a>
+            </div>
+          </div>
+          <div class='os-choice-option'>
+            <button type='button' class='os-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
+              <h3>Mac OSX</h3>
+              <img src='dist/images/apple-logo.png' class='os-choice-img'>
+            </button>
+            <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "mac" }'>
+              <a href='https://dustkid.com/getdustmod/osx64_steam' download><p>64-Bit (Steam)</p></a>
+              <a href='https://dustkid.com/getdustmod/osx64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
+            </div>
+          </div>
+          <div class='os-choice-option'>
+            <button type='button' class='os-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
+              <h3>Linux</h3>
+              <img src='dist/images/linux-logo.png' class='os-choice-img'>
+            </button>
+            <div class='dl-subsection' :class='{ "is-hidden": focusedOS !== "linux" }'>
+              <a href='https://dustkid.com/getdustmod/linux64_steam' download><p>64-Bit (Steam)</p></a>
+              <a href='https://dustkid.com/getdustmod/linux64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
             </div>
           </div>
         </div>

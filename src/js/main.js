@@ -38,7 +38,7 @@ window.onload = function() {
         this.OSChoicesAreHidden = false;
         this.dlButtonDisabled = true;
 
-        window.setTimeout(function() { downloadComponent.expandOSChoices() }, 0);
+        window.setTimeout(function() { downloadComponent.expandOSChoices() }, 17);
       },
       expandOSChoices: function() {
         console.log('test');
