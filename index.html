@@ -49,7 +49,7 @@
       <div class='section-inner l-download'>
         <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
         <h3 v-cloak :class='OSChoicesStyleObj'>Choose Your Operating System</h2>
-        <div class='os-choice-grid' :class='OSChoicesStyleObj'>
+        <div v-cloak class='os-choice-grid' :class='OSChoicesStyleObj'>
           <div class='os-choice-option'>
             <button type='button' class='os-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
               <h3>Windows</h3>

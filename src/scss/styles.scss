@@ -73,10 +73,6 @@ button {
     outline: none;
   }
 }
-
-[v-cloak] {
-  display: none;
-}
 // End base rules
 
 // Layout rules
@@ -270,3 +266,7 @@ button {
   filter: opacity(.5);
 }
 // End state rules
+
+[v-cloak] {
+  display: none;
+}
