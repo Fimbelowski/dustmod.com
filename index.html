@@ -48,7 +48,7 @@
     <section id='download'>
       <div class='section-inner l-download'>
         <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download<img src='dist/images/download-icon.png' class='btn-icon'></button>
-        <div v-cloak class='os-choices' :class='{ "is-hidden": choicesAreHidden }'>
+        <div v-cloak class='os-choices' :class='OSChoicesStyleObj'>
           <h2>Choose Your Operating System</h2>
           <div class='os-choice'>
             <div class='os-choice-option'>

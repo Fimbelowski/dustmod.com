@@ -255,9 +255,12 @@ button {
 
 // State rules
 .is-hidden {
+  display: none;
+}
+
+.is-collapsed {
   opacity: 0;
   max-height: 0;
-  display: none;
 }
 
 .is-focused {

@@ -3,10 +3,17 @@ window.onload = function() {
     el: '#download',
     data: {
       dlButtonDisabled: false,
-      choicesAreHidden: true,
+      OSChoicesAreHidden: true,
+      OSChoicesAreCollapsed: true,
       focusedOS: ''
     },
     computed: {
+      OSChoicesStyleObj: function() {
+        return {
+          'is-hidden': (this.OSChoicesAreHidden),
+          'is-collapsed': (this.OSChoicesAreCollapsed)
+        }
+      },
       windowsStyleObj: function() {
         return {
           'is-focused': (this.focusedOS === 'windows'),
@@ -28,8 +35,14 @@ window.onload = function() {
     },
     methods: {
       showOSChoices: function() {
-        this.choicesAreHidden = false;
+        this.OSChoicesAreHidden = false;
         this.dlButtonDisabled = true;
+
+        window.setTimeout(function() { downloadComponent.expandOSChoices() }, 0);
+      },
+      expandOSChoices: function() {
+        console.log('test');
+        this.OSChoicesAreCollapsed = false;
       },
       focusOSChoice: function(OSToFocus) {
         this.focusedOS = OSToFocus;
