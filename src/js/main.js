@@ -8,7 +8,7 @@ window.onload = function() {
       focusedOS: ''
     },
     computed: {
-      OSChoicesStyleObj: function() {
+      OSChoiceGridStyleObj: function() {
         return {
           'is-hidden': (this.OSChoicesAreHidden),
           'is-collapsed': (this.OSChoicesAreCollapsed)
@@ -35,14 +35,17 @@ window.onload = function() {
     },
     methods: {
       showOSChoices: function() {
-        this.OSChoicesAreHidden = false;
-        this.dlButtonDisabled = true;
+        window.requestAnimationFrame(function() {
+          downloadComponent.OSChoicesAreHidden = false;
+          downloadComponent.dlButtonDisabled = true;
 
-        window.setTimeout(function() { downloadComponent.expandOSChoices() }, 17);
+          downloadComponent.expandOSChoices();
+        });
       },
       expandOSChoices: function() {
-        console.log('test');
-        this.OSChoicesAreCollapsed = false;
+        window.requestAnimationFrame(function() {
+          downloadComponent.OSChoicesAreCollapsed = false;
+        });
       },
       focusOSChoice: function(OSToFocus) {
         this.focusedOS = OSToFocus;
