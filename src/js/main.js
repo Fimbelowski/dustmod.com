@@ -5,7 +5,13 @@ window.onload = function() {
       dlButtonDisabled: false,
       OSChoicesAreHidden: true,
       OSChoicesAreCollapsed: true,
-      focusedOS: ''
+      focusedOS: '',
+      windowsSubsectionIsHidden: true,
+      windowsSubsectionIsCollapsed: true,
+      macSubsectionIsHidden: true,
+      macSubsectionIsCollapsed: true,
+      linuxSubsectionIsHidden: true,
+      linuxSubsectionIsCollapsed: true
     },
     computed: {
       OSChoiceGridStyleObj: function() {
@@ -20,16 +26,34 @@ window.onload = function() {
           'is-semi-transparent': (this.focusedOS && this.focusedOS !== 'windows')
         };
       },
+      windowsSubsectionStyleObj: function() {
+        return {
+          'is-hidden': (this.windowsSubsectionIsHidden),
+          'is-collapsed': (this.windowsSubsectionIsCollapsed)
+        }
+      },
       macStyleObj: function() {
         return {
           'is-focused': (this.focusedOS === 'mac'),
           'is-semi-transparent': (this.focusedOS && this.focusedOS !== 'mac')
         }
       },
+      macSubsectionStyleObj: function() {
+        return {
+          'is-hidden': (this.macSubsectionIsHidden),
+          'is-collapsed': (this.macSubsectionIsCollapsed)
+        }
+      },
       linuxStyleObj: function() {
         return {
           'is-focused': (this.focusedOS === 'linux'),
           'is-semi-transparent': (this.focusedOS && this.focusedOS !== 'linux')
+        }
+      },
+      linuxSubsectionStyleObj: function() {
+        return {
+          'is-hidden': (this.linuxSubsectionIsHidden),
+          'is-collapsed': (this.linuxSubsectionIsCollapsed)
         }
       }
     },
