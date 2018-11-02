@@ -73,6 +73,25 @@ window.onload = function() {
       },
       focusOSChoice: function(OSToFocus) {
         this.focusedOS = OSToFocus;
+
+        // Use requestAnimationFrame to change styles on consecutive repaints for smooth transitions
+        window.requestAnimationFrame(function() {
+          downloadComponent.showDlSubsection();
+
+          window.requestAnimationFrame(function() {
+            downloadComponent.expandDlSubsection();
+          });
+        });
+      },
+      showDlSubsection: function() {
+        this[this.focusedOS + 'SubsectionIsHidden'] = false;
+      },
+      expandDlSubsection: function() {
+        // Collapse all subsections
+        this.windowsSubsectionIsCollapsed = this.macSubsectionIsCollapsed = this.linuxSubsectionIsCollapsed = true;
+
+        // Expand the appropriate subsection
+        this[this.focusedOS + 'SubsectionIsCollapsed'] = false;
       }
     }
   });
