@@ -1,5 +1,5 @@
 window.onload = function() {
-  var downloadComponent = new Vue({
+  var dl = new Vue({
     el: '#download',
     data: {
       dlButtonDisabled: false,
@@ -60,15 +60,15 @@ window.onload = function() {
     methods: {
       showOSChoices: function() {
         window.requestAnimationFrame(function() {
-          downloadComponent.OSChoicesAreHidden = false;
-          downloadComponent.dlButtonDisabled = true;
+          dl.OSChoicesAreHidden = false;
+          dl.dlButtonDisabled = true;
 
-          downloadComponent.expandOSChoices();
+          dl.expandOSChoices();
         });
       },
       expandOSChoices: function() {
         window.requestAnimationFrame(function() {
-          downloadComponent.OSChoicesAreCollapsed = false;
+          dl.OSChoicesAreCollapsed = false;
         });
       },
       focusOSChoice: function(OSToFocus) {
@@ -76,10 +76,10 @@ window.onload = function() {
 
         // Use requestAnimationFrame to change styles on consecutive repaints for smooth transitions
         window.requestAnimationFrame(function() {
-          downloadComponent.showDlSubsection();
+          dl.showDlSubsection();
 
           window.requestAnimationFrame(function() {
-            downloadComponent.expandDlSubsection();
+            dl.expandDlSubsection();
           });
         });
       },
