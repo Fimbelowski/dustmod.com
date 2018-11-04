@@ -1,4 +1,8 @@
 .section-inner {
-  width: 60%;
+  width: 800px;
   margin: 0 auto;
+}
+
+@mixin section-inner--phone-sm-p() {
+  width: 290px;
 }
