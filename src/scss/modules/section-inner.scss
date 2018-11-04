@@ -4,5 +4,7 @@
 }
 
 @mixin section-inner--phone-sm-p() {
-  width: 290px;
+  .section-inner {
+    width: 290px;  
+  }
 }

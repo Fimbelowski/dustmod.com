@@ -1,11 +1,12 @@
 @import 'variables';
+@import 'modules/section-inner';
 
 // Media queries
   // Mobile
     // Small
       // Portrait
       @media(max-width: #{$mobile-sm-portrait-max-width}) and (orientation: portrait) {
-
+        @include section-inner--phone-sm-p()
       }
 
       // Landscape
