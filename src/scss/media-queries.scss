@@ -1,33 +1,4 @@
-// Variable declarations
-$mobile-sm-portrait-max-width: 300px;
-$mobile-sm-landscape-max-width: 530px;
-
-$mobile-md-portrait-min-width: $mobile-sm-portrait-max-width + 1px;
-$mobile-md-portrait-max-width: 360px;
-
-$mobile-md-landscape-min-width: $mobile-sm-landscape-max-width + 1px;
-$mobile-md-landscape-max-width: 640px;
-
-$mobile-lg-portrait-min-width: $mobile-md-portrait-max-width + 1px;
-$mobile-lg-portrait-max-width: 450px;
-
-$mobile-lg-landscape-min-width: $mobile-md-landscape-max-width + 1px;
-$mobile-lg-landscape-max-width: 840px;
-
-$tablet-sm-portrait-win-width: 600px;
-$tablet-sm-portrait-max-width: 768px;
-
-$tablet-sm-landscape-min-width: 960px;
-$tablet-sm-landscape-max-width: 1024px;
-
-$tablet-lg-portrait-min-width: $tablet-sm-portrait-max-width + 1px;
-$tablet-lg-portrait-max-width: 1280px;
-
-$tablet-lg-landscape-min-width: $tablet-sm-landscape-max-width + 1px;
-$tablet-lg-landscape-max-width: 1366px;
-
-$desktop-min-width: $tablet-lg-landscape-max-width + 1px;
-// End variable declarations
+@import 'variables';
 
 // Media queries
   // Mobile
