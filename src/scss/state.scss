@@ -1,0 +1,19 @@
+// State rules
+.is-hidden {
+  display: none;
+}
+
+.is-collapsed {
+  opacity: 0;
+  max-height: 0;
+}
+
+.is-focused {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.is-semi-transparent {
+  filter: opacity(.5);
+}
+// End state rules

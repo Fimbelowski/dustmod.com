@@ -1,0 +1,16 @@
+.dl-subsection {
+  max-height: 150px; // Approximate element height
+
+  padding: 1px 5px;
+  margin: 4px 0;
+
+  background-color: #d4d4d487;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.dl-subsection-note {
+  margin: 0.25em 0;
+  color: #444;
+}

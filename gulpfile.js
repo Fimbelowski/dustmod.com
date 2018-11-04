@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 
 var imagemin = require('gulp-imagemin');
@@ -9,8 +10,9 @@ var minify = require('gulp-minify');
 var del = require('del');
 
 gulp.task('sass', function() {
-  return gulp.src('src/scss/*.scss')
+  return gulp.src('src/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
+  .pipe(concatCss('styles.css'))
   .pipe(cleanCSS())
   .pipe(gulp.dest('dist/css'));
 });
