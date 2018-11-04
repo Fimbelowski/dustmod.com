@@ -16,4 +16,8 @@
 .is-semi-transparent {
   filter: opacity(.5);
 }
+
+[v-cloak] {
+  display: none;
+}
 // End state rules

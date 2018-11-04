@@ -14,8 +14,20 @@ header, footer {
   background-color: $dustkid-purple;
 }
 
+header h1 {
+  color: white;
+}
+
 footer {
   text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+footer span {
+  font-weight: bold;
 }
 
 h1, h2, h3, p, blockquote, cite, li {
