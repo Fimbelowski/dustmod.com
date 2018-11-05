@@ -1,5 +1,5 @@
 .section-inner {
-  width: 800px;
+  width: 650px;
   margin: 0 auto;
 }
 
@@ -33,8 +33,8 @@
   }
 }
 
-@mixin section-inner--phone-lg-l() {
+@mixin section-inner--desktop() {
   .section-inner {
-    width: 650px;
+    width: 850px;
   }
 }

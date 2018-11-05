@@ -49,7 +49,6 @@
 
       // Landscape
       @media(min-width: #{$mobile-lg-landscape-min-width}) and (max-width: #{$mobile-lg-landscape-max-width}) and (orientation: landscape) {
-        @include section-inner--phone-lg-l()
         @include os-btn--phone()
         @include os-choice-img--phone()
       }
@@ -79,5 +78,5 @@
 
   // Desktop
     @media(min-width: #{$desktop-min-width}) {
-
+      @include section-inner--desktop()
     }
