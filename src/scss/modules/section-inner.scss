@@ -14,3 +14,27 @@
     width: 510px;
   }
 }
+
+@mixin section-inner--phone-md-p() {
+  .section-inner {
+    width: 340px;
+  }
+}
+
+@mixin section-inner--phone-md-l() {
+  .section-inner {
+    width: 620px;
+  }
+}
+
+@mixin section-inner--phone-lg-p() {
+  .section-inner {
+    width: 380px;
+  }
+}
+
+@mixin section-inner--phone-lg-l() {
+  .section-inner {
+    width: 650px;
+  }
+}

@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
-  max-height: 800px; // Rough element height
+  max-height: 800px; // Approximate element height
 
   margin: 30px 0;
 
@@ -13,4 +13,10 @@
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: linear;
+}
+
+@mixin os-choice-grid--phone-p() {
+  .os-choice-grid {
+    max-height: 1050px; // Approximate element height
+  }
 }

@@ -12,7 +12,7 @@ var del = require('del');
 gulp.task('sass', function() {
   return gulp.src(['src/scss/_variables.scss', 'src/scss/base.scss',
                     'src/scss/layout.scss', 'src/scss/modules/*.scss',
-                    'src/scss/state.scss', 'src/scss/media-queries.scss'])
+                    'src/scss/media-queries.scss', 'src/scss/state.scss'])
   .pipe(sass().on('error', sass.logError))
   .pipe(concatCss('styles.css'))
   .pipe(cleanCSS())
