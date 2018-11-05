@@ -36,7 +36,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('js:watch', function() {
-  gulp.watch('src/js/*.js', ['js']);
+  gulp.watch('src/js/**/*.js', ['js']);
 });
 
 gulp.task('clean', function() {
