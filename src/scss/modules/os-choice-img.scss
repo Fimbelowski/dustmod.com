@@ -3,3 +3,10 @@
   height: auto;
   margin-top: 40px;
 }
+
+@mixin os-choice-img--phone-sm() {
+  .os-choice-img {
+    width: 75px;
+    margin-top: 5px;
+  }
+}

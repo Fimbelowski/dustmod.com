@@ -1,6 +1,7 @@
 .os-choice-grid {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
 
   max-height: 800px; // Rough element height

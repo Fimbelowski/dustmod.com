@@ -5,6 +5,12 @@
 
 @mixin section-inner--phone-sm-p() {
   .section-inner {
-    width: 290px;  
+    width: 280px;
+  }
+}
+
+@mixin section-inner--phone-sm-l() {
+  .section-inner {
+    width: 510px;
   }
 }

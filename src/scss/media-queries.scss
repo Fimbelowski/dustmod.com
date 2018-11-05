@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'modules/section-inner';
+@import 'modules/os-btn';
+@import 'modules/os-choice-img';
 
 // Media queries
   // Mobile
@@ -7,11 +9,15 @@
       // Portrait
       @media(max-width: #{$mobile-sm-portrait-max-width}) and (orientation: portrait) {
         @include section-inner--phone-sm-p()
+        @include os-btn--phone-sm()
+        @include os-choice-img--phone-sm()
       }
 
       // Landscape
       @media(max-width: #{$mobile-sm-landscape-max-width}) and (orientation: landscape) {
-
+        @include section-inner--phone-sm-l()
+        @include os-btn--phone-sm()
+        @include os-choice-img--phone-sm()
       }
 
     // Medium
