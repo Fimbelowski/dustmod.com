@@ -9,24 +9,21 @@ body {
   margin: 0;
 }
 
-header, section, footer {
-  padding: 5px 0;
-}
-
 header, footer {
   background-color: $dustkid-purple;
 }
 
 header {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 section {
-  margin: 10px 0;
+  margin: 25px 0;
 }
 
 footer {
-  margin-top: 5px;
+  margin-top: 25px;
+  padding: 5px 0;
 }
 
 header h1 {
@@ -38,7 +35,7 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: inherit;
 }
 
 footer span {
@@ -58,7 +55,7 @@ h1 {
 h2 {
   color: $dustkid-purple;
   text-align: left;
-  margin: 0.25em 0;
+  margin: 0;
 }
 
 h3 {
@@ -66,7 +63,7 @@ h3 {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 0.1em 0;
 }
 
 blockquote {
@@ -89,6 +86,13 @@ cite {
 
 cite::before {
   content: '\2013';
+}
+
+ul {
+  padding: 0.5em 2em;
+  margin: 0;
+  background-color: #cdcdcd66;
+  border-radius: 5px;
 }
 
 button {
