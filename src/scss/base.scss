@@ -98,9 +98,20 @@ ul {
 
 button {
   cursor: pointer;
+  
+  transition-property: all;
+  transition-duration: 0.3s;
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.05);
   }
 }
 // End base rules
