@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'modules/section-inner';
+@import 'modules/download-btn';
 @import 'modules/os-btn';
 @import 'modules/os-choice-img';
 @import 'modules/os-choice-grid';
@@ -9,7 +10,8 @@
     // Small
       // Portrait
       @media(max-width: #{$mobile-sm-portrait-max-width}) and (orientation: portrait) {
-        @include section-inner--phone-sm-p()
+        @include section-inner--phone()
+        @include download-btn--phone()
         @include os-choice-grid--phone-p()
         @include os-btn--phone()
         @include os-choice-img--phone()
@@ -17,7 +19,8 @@
 
       // Landscape
       @media(max-width: #{$mobile-sm-landscape-max-width}) and (orientation: landscape) {
-        @include section-inner--phone-sm-l()
+        @include section-inner--phone()
+        @include download-btn--phone()
         @include os-btn--phone()
         @include os-choice-img--phone()
       }
@@ -25,7 +28,8 @@
     // Medium
       // Portrait
       @media(min-width: #{$mobile-md-portrait-min-width}) and (max-width: #{$mobile-md-portrait-max-width}) and (orientation: portrait) {
-        @include section-inner--phone-md-p()
+        @include section-inner--phone()
+        @include download-btn--phone()
         @include os-choice-grid--phone-p()
         @include os-btn--phone()
         @include os-choice-img--phone()
@@ -33,7 +37,8 @@
 
       // Landscape
       @media(min-width: #{$mobile-md-landscape-min-width}) and (max-width: #{$mobile-md-landscape-max-width}) and (orientation: landscape) {
-        @include section-inner--phone-md-l()
+        @include section-inner--phone()
+        @include download-btn--phone()
         @include os-btn--phone()
         @include os-choice-img--phone()
       }
@@ -41,7 +46,8 @@
     // Large
       // Portrait
       @media(min-width: #{$mobile-lg-portrait-min-width}) and (max-width: #{$mobile-lg-portrait-max-width}) and (orientation: portrait) {
-        @include section-inner--phone-lg-p()
+        @include section-inner--phone()
+        @include download-btn--phone()
         @include os-choice-grid--phone-p()
         @include os-btn--phone()
         @include os-choice-img--phone()
@@ -49,6 +55,7 @@
 
       // Landscape
       @media(min-width: #{$mobile-lg-landscape-min-width}) and (max-width: #{$mobile-lg-landscape-max-width}) and (orientation: landscape) {
+        @include download-btn--phone()
         @include os-btn--phone()
         @include os-choice-img--phone()
       }

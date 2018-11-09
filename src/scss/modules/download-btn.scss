@@ -35,3 +35,9 @@
     }
   }
 }
+
+@mixin download-btn--phone() {
+  .download-btn {
+    padding: 10px 45px;
+  }
+}

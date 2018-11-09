@@ -65,6 +65,7 @@ h3 {
 
 p {
   margin: 0.1em 0;
+  word-break: break-word;
 }
 
 blockquote {
@@ -98,7 +99,7 @@ ul {
 
 button {
   cursor: pointer;
-  
+
   transition-property: all;
   transition-duration: 0.3s;
 
