@@ -1,11 +1,11 @@
 .section-inner {
-  width: 650px;
+  width: 750px;
   margin: 0 auto;
 }
 
 @mixin section-inner--phone() {
   .section-inner {
-    width: 96%;
+    width: 94%;
   }
 }
 
