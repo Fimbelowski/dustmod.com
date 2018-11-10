@@ -17,6 +17,10 @@ header {
   margin-bottom: 25px;
 }
 
+header h1 {
+  color: white;
+}
+
 section {
   margin: 25px 0;
 }
@@ -24,13 +28,6 @@ section {
 footer {
   margin-top: 25px;
   padding: 5px 0;
-}
-
-header h1 {
-  color: white;
-}
-
-footer {
   text-align: center;
 }
 
