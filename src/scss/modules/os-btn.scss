@@ -5,16 +5,10 @@
 
   padding: 10px 60px 30px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   background-color: #9a9a9a6b;
 
   border: none;
   border-radius: 5px;
-}
-
-@mixin os-btn--phone() {
-  .os-btn {
-    height: 185px;
-  }
 }

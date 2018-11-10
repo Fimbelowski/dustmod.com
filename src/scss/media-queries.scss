@@ -13,7 +13,6 @@
         @include section-inner--phone()
         @include download-btn--phone()
         @include os-choice-grid--phone-p()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
@@ -21,7 +20,6 @@
       @media(max-width: #{$mobile-sm-landscape-max-width}) and (orientation: landscape) {
         @include section-inner--phone()
         @include download-btn--phone()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
@@ -31,7 +29,6 @@
         @include section-inner--phone()
         @include download-btn--phone()
         @include os-choice-grid--phone-p()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
@@ -39,7 +36,6 @@
       @media(min-width: #{$mobile-md-landscape-min-width}) and (max-width: #{$mobile-md-landscape-max-width}) and (orientation: landscape) {
         @include section-inner--phone()
         @include download-btn--phone()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
@@ -49,14 +45,12 @@
         @include section-inner--phone()
         @include download-btn--phone()
         @include os-choice-grid--phone-p()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
       // Landscape
       @media(min-width: #{$mobile-lg-landscape-min-width}) and (max-width: #{$mobile-lg-landscape-max-width}) and (orientation: landscape) {
         @include download-btn--phone()
-        @include os-btn--phone()
         @include os-choice-img--phone()
       }
 
