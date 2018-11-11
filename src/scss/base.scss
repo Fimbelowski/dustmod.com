@@ -112,4 +112,10 @@ button {
     transform: scale(1.05);
   }
 }
+
+@mixin font-size--phone() {
+  html {
+    font-size: 17px;
+  }
+}
 // End base rules
