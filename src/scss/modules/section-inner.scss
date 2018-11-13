@@ -1,6 +1,8 @@
 .section-inner {
   width: 750px;
+  padding: 10px 15px;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 @mixin section-inner--phone() {

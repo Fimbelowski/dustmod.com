@@ -6,19 +6,16 @@ html {
 }
 
 body {
+  background-color: $gray-100;
   margin: 0;
 }
 
 header, footer {
-  background-color: $dustkid-purple;
+  background-color: $gray-900;
 }
 
 header {
   margin-bottom: 25px;
-}
-
-header h1 {
-  color: white;
 }
 
 section {
@@ -29,6 +26,11 @@ footer {
   margin-top: 25px;
   padding: 5px 0;
   text-align: center;
+}
+
+footer p {
+  color: $primary-100;
+  margin: 10px 0;
 }
 
 footer a {
@@ -46,11 +48,12 @@ h1, h2, h3, p, blockquote, cite, li {
 h1 {
   font-family: $heading-font;
   font-size: 2.5em;
+  color: $primary-100;
   margin: 0;
 }
 
 h2 {
-  color: $dustkid-purple;
+  color: $primary-500;
   text-align: left;
   margin: 0;
 }
@@ -66,12 +69,14 @@ p {
 }
 
 blockquote {
+  background-color: $gray-300;
+  border-left: 10px solid $primary-500;
+
   margin: 0;
-  border-left: 10px solid $dustkid-purple;
 }
 
 blockquote::before {
-  color: $dustkid-purple;
+  color: $primary-500;
   content: open-quote;
   font-size: 4em;
   line-height: 0;
@@ -80,6 +85,7 @@ blockquote::before {
 }
 
 cite {
+  display: block;
   text-align: right;
 }
 
@@ -90,7 +96,7 @@ cite::before {
 ul {
   padding: 0.5em 2em;
   margin: 0;
-  background-color: #cdcdcd66;
+  // background-color: #cdcdcd66;
   border-radius: 5px;
 }
 
