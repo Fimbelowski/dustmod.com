@@ -1,3 +1,5 @@
+@import '../variables';
+
 .os-btn {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,27 @@
 
   padding: 10px 60px 30px;
 
-  margin-bottom: 10px;
-
-  background-color: #9a9a9a6b;
+  margin-bottom: 15px;
 
   border: none;
   border-radius: 5px;
+}
+
+.windows {
+  background-color: $windows-accent-100;
+  border: solid 2px $windows-accent-500;
+}
+
+.windows-text {
+  color: $windows-accent-500;
+}
+
+.osx {
+  background-color: $gray-300;
+  border: solid 2px black;
+}
+
+.linux {
+  background-color: $linux-accent-100;
+  border: solid 2px $linux-accent-500;
 }
