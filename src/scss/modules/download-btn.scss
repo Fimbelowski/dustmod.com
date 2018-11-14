@@ -30,7 +30,7 @@
 
   &:disabled {
     cursor: not-allowed;
-    filter:  opacity(.4);
+    background-color: $primary-100;
 
     &:hover {
       transform: scale(1);
