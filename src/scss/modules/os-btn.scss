@@ -13,7 +13,7 @@
   border-radius: 5px;
 }
 
-.windows {
+.windows-btn {
   background-color: $windows-accent-100;
   border: solid 2px $windows-accent-500;
 }
@@ -22,12 +22,12 @@
   color: $windows-accent-500;
 }
 
-.osx {
-  background-color: $gray-300;
+.osx-btn {
+  background-color: $gray-200;
   border: solid 2px black;
 }
 
-.linux {
+.linux-btn {
   background-color: $linux-accent-100;
-  border: solid 2px $linux-accent-500;
+  border: solid 2px $linux-accent-400;
 }
