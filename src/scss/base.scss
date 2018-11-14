@@ -41,7 +41,7 @@ footer span {
   font-weight: bold;
 }
 
-h1, h2, h3, p, blockquote, cite, li {
+h3, p, blockquote, cite, li {
   font-family: $text-font;
 }
 
@@ -53,6 +53,7 @@ h1 {
 }
 
 h2 {
+  font-family: $heading-font;
   color: $primary-500;
   text-align: left;
   margin: 0;
