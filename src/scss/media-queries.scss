@@ -57,6 +57,7 @@
       // Landscape
       @media(min-width: #{$mobile-lg-landscape-min-width}) and (max-width: #{$mobile-lg-landscape-max-width}) and (orientation: landscape) {
         @include font-size--phone()
+        @include section-inner--phone()
         @include download-btn--phone()
         @include os-choice-img--phone()
       }

@@ -7,6 +7,7 @@
 
 @mixin section-inner--phone() {
   .section-inner {
+    box-sizing: border-box;
     width: 94%;
     padding: 7px 10px;
   }
