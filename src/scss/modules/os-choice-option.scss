@@ -6,3 +6,9 @@
 
   margin: 0 15px;
 }
+
+@mixin os-choice-option--phone-l() {
+  .os-choice-option {
+    width: 200px;
+  }
+}
