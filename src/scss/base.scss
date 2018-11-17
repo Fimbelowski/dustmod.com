@@ -15,6 +15,7 @@ header, footer {
 }
 
 header {
+  border-bottom: solid 1px $gray-300;
   margin-bottom: 25px;
 }
 
@@ -23,6 +24,7 @@ section {
 }
 
 footer {
+  border-top: solid 1px $gray-300;
   margin-top: 25px;
   padding: 5px 0;
   text-align: center;
