@@ -6,16 +6,16 @@ html {
 }
 
 body {
-  background-color: $gray-100;
+  background-color: $gray-900;
   margin: 0;
 }
 
 header, footer {
-  background-color: white;
+  background-color: $gray-800;
 }
 
 header {
-  border-bottom: solid 1px $gray-300;
+  // border-bottom: solid 1px $gray-300;
   margin-bottom: 25px;
 }
 
@@ -24,19 +24,14 @@ section {
 }
 
 footer {
-  border-top: solid 1px $gray-300;
+  // border-top: solid 1px $gray-300;
   margin-top: 25px;
   padding: 5px 0;
   text-align: center;
 }
 
 footer p {
-  color: $primary-500;
   margin: 10px 0;
-}
-
-footer a {
-  color: inherit;
 }
 
 footer span {
@@ -45,18 +40,19 @@ footer span {
 
 h3, p, blockquote, cite, li {
   font-family: $text-font;
+  color: white;
 }
 
 h1 {
   font-family: $heading-font;
   font-size: 2.5em;
-  color: $primary-500;
+  color: $primary-200;
   margin: 0;
 }
 
 h2 {
   font-family: $heading-font;
-  color: $primary-500;
+  color: $primary-200;
   text-align: left;
   margin: 0;
 }
@@ -67,19 +63,18 @@ h3 {
 }
 
 p {
-  margin: 0.1em 0;
+  margin: 0.3em 0;
   word-break: break-word;
 }
 
 blockquote {
-  background-color: $gray-100;
-  border-left: 10px solid $primary-500;
+  border-left: 10px solid $primary-200;
 
   margin: 0;
 }
 
 blockquote::before {
-  color: $primary-500;
+  color: $primary-200;
   content: open-quote;
   font-size: 4em;
   line-height: 0;
@@ -120,6 +115,10 @@ button {
   &:active {
     transform: scale(1.05);
   }
+}
+
+a {
+  color: $primary-200;
 }
 
 @mixin font-size--phone() {
