@@ -22,12 +22,20 @@
   color: $windows-accent-500;
 }
 
-.osx-btn {
+.os-x-btn {
   background-color: $gray-200;
   border: solid 2px black;
+}
+
+.os-x-text {
+  color: black;
 }
 
 .linux-btn {
   background-color: $linux-accent-100;
   border: solid 2px $linux-accent-400;
+}
+
+.linux-text {
+  color: $linux-accent-400;
 }

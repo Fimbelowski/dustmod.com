@@ -85,8 +85,8 @@
             </div>
           </div>
           <div class='os-choice-option'>
-            <button type='button' class='os-btn osx-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-              <h3>Mac OS X</h3>
+            <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
+              <h3 class='os-x-text'>Mac OS X</h3>
               <img src='dist/images/apple-logo.png' class='os-choice-img'>
             </button>
             <div class='dl-subsection osx-subsection' :class='macSubsectionStyleObj'>
@@ -96,7 +96,7 @@
           </div>
           <div class='os-choice-option'>
             <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-              <h3>Linux</h3>
+              <h3 class='linux-text'>Linux</h3>
               <img src='dist/images/linux-logo.png' class='os-choice-img'>
             </button>
             <div class='dl-subsection linux-subsection' :class='linuxSubsectionStyleObj'>
