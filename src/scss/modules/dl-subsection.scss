@@ -8,15 +8,19 @@
   border-radius: 5px;
   border: none;
 
-  background-color: $gray-100;
+  background-color: $gray-300;
 
   transition-property: all;
   transition-duration: 0.3s;
 }
 
+.dl-subsection p {
+  color: $gray-500;
+}
+
 .dl-subsection-note {
   margin: 0.25em 0;
-  color: #444;
+  color: $gray-500;
 }
 
 .windows-subsection {

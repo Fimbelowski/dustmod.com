@@ -6,16 +6,16 @@ html {
 }
 
 body {
-  background-color: $gray-500;
+  background-color: $gray-700;
   margin: 0;
 }
 
 header, footer {
-  background-color: $gray-400;
+  background-color: $gray-600;
 }
 
 header {
-  border-bottom: solid 1px $gray-300;
+  border-bottom: solid 1px $gray-500;
   margin-bottom: 25px;
 }
 
@@ -24,7 +24,7 @@ section {
 }
 
 footer {
-  border-top: solid 1px $gray-300;
+  border-top: solid 1px $gray-500;
   margin-top: 25px;
   padding: 5px 0;
   text-align: center;
@@ -94,7 +94,6 @@ cite::before {
 ul {
   padding: 0.5em 2em;
   margin: 0;
-  // background-color: #cdcdcd66;
   border-radius: 5px;
 }
 
@@ -118,7 +117,7 @@ button {
 }
 
 a {
-  color: $primary-300;
+  color: $primary-500;
 }
 
 @mixin font-size--phone() {
