@@ -14,12 +14,12 @@
 }
 
 .windows-btn {
-  background-color: $windows-accent-100;
-  border: solid 2px $windows-accent-500;
+  background-color: $windows-accent-light;
+  border: solid 2px $windows-accent-dark;
 }
 
 .windows-text {
-  color: $windows-accent-500;
+  color: $windows-accent-dark;
 }
 
 .os-x-btn {
@@ -32,10 +32,10 @@
 }
 
 .linux-btn {
-  background-color: $linux-accent-100;
-  border: solid 2px $linux-accent-400;
+  background-color: $linux-accent-light;
+  border: solid 2px $linux-accent-dark;
 }
 
 .linux-text {
-  color: $linux-accent-400;
+  color: $linux-accent-dark;
 }
