@@ -70,38 +70,58 @@
             </button>
             <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
               <p class='dl-subsection-note'>Requires Win10 (Best Performance)</p>
-              <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download><p>DirectX 12 (Steam)</p></a>
-              <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download><p>DirectX 12 (DRM-Free)</p></a>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download>DirectX 12 (Steam)</a>
+              </p>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download>DirectX 12 (DRM-Free)</a>
+              </p>
             </div>
             <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
               <p class='dl-subsection-note'>(The same as vanilla Dustforce)</p>
-              <a href='https://dustkid.com/getdustmod/win32_steam' download><p>DirectX 9 (Steam)</p></a>
-              <a href='https://dustkid.com/getdustmod/win32_drmfree' download><p>DirectX 9 (DRM-Free)</p></a>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_steam' download>DirectX 9 (Steam)</a>
+              </p>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_drmfree' download>DirectX 9 (DRM-Free)</a>
+              </p>
             </div>
             <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
               <p class='dl-subsection-note'>(OpenGL Based)</p>
-              <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload><p>SDL2 (Steam)</p></a>
-              <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download><p>SDL2 (DRM-Free)</p></a>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload>SDL2 (Steam)</a>
+              </p>
+              <p>
+                <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download>SDL2 (DRM-Free)</a>
+              </p>
             </div>
           </div>
           <div class='os-choice-option'>
-            <button type='button' class='os-btn osx-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-              <h3>Mac OS X</h3>
+            <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
+              <h3 class='os-x-text'>Mac OS X</h3>
               <img src='dist/images/apple-logo.png' class='os-choice-img'>
             </button>
             <div class='dl-subsection osx-subsection' :class='macSubsectionStyleObj'>
-              <a href='https://dustkid.com/getdustmod/osx64_steam' download><p>64-Bit (Steam)</p></a>
-              <a href='https://dustkid.com/getdustmod/osx64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
+              <p>
+                <a href='https://dustkid.com/getdustmod/osx64_steam' download>64-Bit (Steam)</a>
+              </p>
+              <p>
+                <a href='https://dustkid.com/getdustmod/osx64_drmfree' download>64-Bit (DRM-Free)</a>
+              </p>
             </div>
           </div>
           <div class='os-choice-option'>
             <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-              <h3>Linux</h3>
+              <h3 class='linux-text'>Linux</h3>
               <img src='dist/images/linux-logo.png' class='os-choice-img'>
             </button>
             <div class='dl-subsection linux-subsection' :class='linuxSubsectionStyleObj'>
-              <a href='https://dustkid.com/getdustmod/linux64_steam' download><p>64-Bit (Steam)</p></a>
-              <a href='https://dustkid.com/getdustmod/linux64_drmfree' download><p>64-Bit (DRM-Free)</p></a>
+              <p>
+                <a href='https://dustkid.com/getdustmod/linux64_steam' download>64-Bit (Steam)</a>
+              </p>
+              <p>
+                <a href='https://dustkid.com/getdustmod/linux64_drmfree' download>64-Bit (DRM-Free)</a>
+              </p>
             </div>
           </div>
         </div>
@@ -117,6 +137,12 @@
         <p class='block-text'>If you’re playing on Steam you might like to add the Dustmod executable to your game launcher by navigating to “Games” -> “Add a Non-Steam Game to my Library” and finding the Dustmod executable (typically at “C:\Program Files (x86)\Steam\steamapps\common\Dustforce\dustmod.exe”). Steam will still recognize the game as Dustforce once the game is running.</p>
       </div>
     </section>
+    <section id='support'>
+    </section>
+      <div class='section-inner section-background'>
+        <h2>Support</h2>
+        <p>If you need any assistance installing or troubleshooting Dustmod please feel free to post in the <a href='https://discord.gg/4F9WQeV' rel='external' target='_blank'>Dustforce Discord server.</a></p>
+      </div>
     <footer>
       <div class='section-inner'>
         <p>Copyright &copy; <span>Christopher Fimbel 2018</span></p>
