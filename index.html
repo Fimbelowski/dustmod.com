@@ -1,9 +1,9 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Dustmod!</title>
-    <meta name='description' content='A Simple SPA for Dustmod.'>
-    <meta name='keywords' content='Dustforce, Dustforce DX, Dustmod'>
+    <title>Dustmod! an in-game mod for Dustforce DX</title>
+    <meta name='description' content="Dustmod is an in-game mod for Dustforce DX that enhances and extends the game with additional tools, game-modes and quality of life changes.">
+    <meta name='keywords' content='Dustmod, Dustforce, DX, mod, steam, windows, mac, linux'>
     <meta name='author' content='Christopher Fimbel'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
@@ -60,9 +60,10 @@
     </section>
     <section id='download'>
       <div class='section-inner section-background l-download'>
+        <h2>Download</h2>
         <a href='#download' class='scroll-link'>
           <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download
-            <img src='dist/images/download-icon.png' class='btn-icon'>
+            <img src='dist/images/download-icon.png' class='btn-icon' alt='download icon'>
           </button>
         </a>
         <h3 v-cloak :class='OSChoiceGridStyleObj'>Choose Your Operating System</h2>
@@ -71,7 +72,7 @@
             <a href='#windows' class='scroll-link'>
               <button type='button' class='os-btn windows-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
                 <h3 class='windows-text'>Windows</h3>
-                <img src='dist/images/windows-logo.png' class='os-choice-img'>
+                <img src='dist/images/windows-logo.png' class='os-choice-img' alt='Windows logo'>
               </button>
             </a>
             <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
@@ -106,7 +107,7 @@
             <a href='#mac' class='scroll-link'>
               <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
                 <h3 class='os-x-text'>Mac OS X</h3>
-                <img src='dist/images/apple-logo.png' class='os-choice-img'>
+                <img src='dist/images/apple-logo.png' class='os-choice-img' alt='Apple logo'>
               </button>
             </a>
             <div class='dl-subsection osx-subsection' :class='macSubsectionStyleObj'>
@@ -122,7 +123,7 @@
             <a href='#linux' class='scroll-link'>
               <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
                 <h3 class='linux-text'>Linux</h3>
-                <img src='dist/images/linux-logo.png' class='os-choice-img'>
+                <img src='dist/images/linux-logo.png' class='os-choice-img' alt='Linux logo'>
               </button>
             </a>
             <div class='dl-subsection linux-subsection' :class='linuxSubsectionStyleObj'>
