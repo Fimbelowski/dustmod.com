@@ -61,15 +61,16 @@
     <section id='download'>
       <div class='section-inner section-background l-download'>
         <h2>Download</h2>
-        <a href='#download' class='scroll-link'>
-          <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download
-            <img src='dist/images/download-icon.png' class='btn-icon' alt='download icon'>
+        <a href='#download' class='scroll-link no-decoration'>
+          <button type='button' class='btn-main' @click="showOSChoices" :disabled='dlButtonDisabled'>
+            <p class='btn-main-text'>Download Dustmod</p>
+            <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
           </button>
         </a>
         <h3 v-cloak :class='OSChoiceGridStyleObj'>Choose Your Operating System</h2>
         <div v-cloak :class='OSChoiceGridStyleObj' class='os-choice-grid'>
           <div class='os-choice-option' id='windows'>
-            <a href='#windows' class='scroll-link'>
+            <a href='#windows' class='scroll-link no-decoration'>
               <button type='button' class='os-btn windows-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
                 <h3 class='windows-text'>Windows</h3>
                 <img src='dist/images/windows-logo.png' class='os-choice-img' alt='Windows logo'>
@@ -104,7 +105,7 @@
             </div>
           </div>
           <div class='os-choice-option' id='mac'>
-            <a href='#mac' class='scroll-link'>
+            <a href='#mac' class='scroll-link no-decoration'>
               <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
                 <h3 class='os-x-text'>Mac OS X</h3>
                 <img src='dist/images/apple-logo.png' class='os-choice-img' alt='Apple logo'>
@@ -120,7 +121,7 @@
             </div>
           </div>
           <div class='os-choice-option' id='linux'>
-            <a href='#linux' class='scroll-link'>
+            <a href='#linux' class='scroll-link no-decoration'>
               <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
                 <h3 class='linux-text'>Linux</h3>
                 <img src='dist/images/linux-logo.png' class='os-choice-img' alt='Linux logo'>
@@ -149,11 +150,17 @@
       </div>
     </section>
     <section id='support'>
-    </section>
       <div class='section-inner section-background'>
         <h2>Support</h2>
-        <p>If you need any assistance installing or troubleshooting Dustmod please feel free to post in the <a href='https://discord.gg/4F9WQeV' rel='external' target='_blank'>Dustforce Discord server.</a></p>
+        <p>If you need any assistance installing or troubleshooting Dustmod please feel free to click the button below to join the Dustforce Discord server for help.</p>
+        <a href='https://discord.gg/4F9WQeV' class='no-decoration' rel='external' target='_blank'>
+          <button type='button' class='btn-main'>
+            <p class='btn-main-text'>Dustforce Discord Server</p>
+            <img src='dist/images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
+          </button>
+        </a>
       </div>
+    </section>
     <footer>
       <div class='section-inner'>
         <p>Copyright &copy; <span>Christopher Fimbel 2018</span></p>
