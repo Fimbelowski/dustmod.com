@@ -62,8 +62,9 @@
       <div class='section-inner section-background l-download'>
         <h2>Download</h2>
         <a href='#download' class='scroll-link no-decoration'>
-          <button type='button' class='download-btn' @click="showOSChoices" :disabled='dlButtonDisabled'>Download
-            <img src='dist/images/download-icon.png' class='btn-icon' alt='download icon'>
+          <button type='button' class='btn-main' @click="showOSChoices" :disabled='dlButtonDisabled'>
+            <p class='btn-main-text'>Download Dustmod</p>
+            <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
           </button>
         </a>
         <h3 v-cloak :class='OSChoiceGridStyleObj'>Choose Your Operating System</h2>
@@ -153,8 +154,9 @@
         <h2>Support</h2>
         <p>If you need any assistance installing or troubleshooting Dustmod please feel free to click the button below to join the Dustforce Discord server for help.</p>
         <a href='https://discord.gg/4F9WQeV' class='no-decoration' rel='external' target='_blank'>
-          <button type='button' class='download-btn'>Dustforce Discord Server
-            <img src='dist/images/Discord-Logo-White.png' class='btn-icon' alt='Discord logo'>
+          <button type='button' class='btn-main'>
+            <p class='btn-main-text'>Dustforce Discord Server</p>
+            <img src='dist/images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
           </button>
         </a>
       </div>
