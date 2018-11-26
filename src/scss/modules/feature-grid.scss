@@ -1,0 +1,46 @@
+@import '../variables';
+
+.feature-grid {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.feature {
+    box-sizing: border-box;
+    width: 49%;
+    margin: 5px 0;
+
+    position: relative;
+
+    border-radius: 5px;
+    border: solid 1px $gray-700;
+    overflow: hidden;
+
+    filter: brightness(.7);
+    transition: filter 0.2s linear;
+    
+    &:hover {
+        filter: brightness(1);
+    }
+}
+
+.feature-background {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature-overlay {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: rgba($gray-700, .6);
+    text-align: center;
+
+    bottom: 0;
+}
