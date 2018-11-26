@@ -44,3 +44,9 @@
 
     bottom: 0;
 }
+
+@mixin feature--phone() {
+    .feature {
+        width: 98%;
+    }
+}

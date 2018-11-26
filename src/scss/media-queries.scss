@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'base';
 @import 'modules/section-inner';
+@import 'modules/feature-grid';
 @import 'modules/btn-main';
 @import 'modules/btn-icon';
 @import 'modules/os-btn';
@@ -14,6 +15,7 @@
       @media(max-width: #{$mobile-sm-portrait-max-width}) and (orientation: portrait) {
         @include font-size--phone();
         @include section-inner--phone();
+        @include feature--phone();
         @include btn-main--phone();
         @include btn-icon--phone();
         @include os-choice-grid--phone-p();
@@ -34,6 +36,7 @@
       @media(min-width: #{$mobile-md-portrait-min-width}) and (max-width: #{$mobile-md-portrait-max-width}) and (orientation: portrait) {
         @include font-size--phone();
         @include section-inner--phone();
+        @include feature--phone();
         @include btn-main--phone();
         @include btn-icon--phone();
         @include os-choice-grid--phone-p();
@@ -54,6 +57,7 @@
       @media(min-width: #{$mobile-lg-portrait-min-width}) and (max-width: #{$mobile-lg-portrait-max-width}) and (orientation: portrait) {
         @include font-size--phone();
         @include section-inner--phone();
+        @include feature--phone();
         @include btn-main--phone();
         @include btn-icon--phone();
         @include os-choice-grid--phone-p();
