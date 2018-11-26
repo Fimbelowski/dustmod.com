@@ -2,6 +2,7 @@
 @import 'base';
 @import 'modules/section-inner';
 @import 'modules/btn-main';
+@import 'modules/btn-icon';
 @import 'modules/os-btn';
 @import 'modules/os-choice-img';
 @import 'modules/os-choice-grid';
@@ -11,62 +12,68 @@
     // Small
       // Portrait
       @media(max-width: #{$mobile-sm-portrait-max-width}) and (orientation: portrait) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-grid--phone-p()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-grid--phone-p();
+        @include os-choice-img--phone();
       }
 
       // Landscape
       @media(max-width: #{$mobile-sm-landscape-max-width}) and (orientation: landscape) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-img--phone();
       }
 
     // Medium
       // Portrait
       @media(min-width: #{$mobile-md-portrait-min-width}) and (max-width: #{$mobile-md-portrait-max-width}) and (orientation: portrait) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-grid--phone-p()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-grid--phone-p();
+        @include os-choice-img--phone();
       }
 
       // Landscape
       @media(min-width: #{$mobile-md-landscape-min-width}) and (max-width: #{$mobile-md-landscape-max-width}) and (orientation: landscape) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-img--phone();
       }
 
     // Large
       // Portrait
       @media(min-width: #{$mobile-lg-portrait-min-width}) and (max-width: #{$mobile-lg-portrait-max-width}) and (orientation: portrait) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-grid--phone-p()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-grid--phone-p();
+        @include os-choice-img--phone();
       }
 
       // Landscape
       @media(min-width: #{$mobile-lg-landscape-min-width}) and (max-width: #{$mobile-lg-landscape-max-width}) and (orientation: landscape) {
-        @include font-size--phone()
-        @include section-inner--phone()
-        @include download-btn--phone()
-        @include os-choice-img--phone()
+        @include font-size--phone();
+        @include section-inner--phone();
+        @include btn-main--phone();
+        @include btn-icon--phone();
+        @include os-choice-img--phone();
       }
 
   // Tablet
     // Small
       // Portrait
       @media(min-width: #{$tablet-sm-portrait-win-width}) and (max-width: #{$tablet-sm-portrait-max-width}) and (orientation: portrait) {
-        @include section-inner--phone()
+        @include section-inner--phone();
       }
 
       // Landscape
@@ -87,5 +94,5 @@
 
   // Desktop
     @media(min-width: #{$desktop-min-width}) {
-      @include section-inner--desktop()
+      @include section-inner--desktop();
     }

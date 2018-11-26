@@ -39,8 +39,12 @@
   margin: 0;
 }
 
-@mixin download-btn--phone() {
-  .download-btn {
-    padding: 10px 45px;
+@mixin btn-main--phone() {
+  .btn-main {
+    padding: 13px 20px;
+  }
+
+  .btn-main-text {
+    font-size: 1.75rem;
   }
 }

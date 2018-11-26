@@ -10,3 +10,9 @@
 .discord-icon {
   height: 50px;
 }
+
+@mixin btn-icon--phone() {
+  .download-icon {
+    height: 25px;
+  }
+}
