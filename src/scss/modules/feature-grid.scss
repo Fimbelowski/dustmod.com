@@ -13,7 +13,7 @@
 
 .feature {
     box-sizing: border-box;
-    width: 49%;
+    width: 100%;
     margin: 5px 0;
 
     position: relative;
@@ -43,10 +43,4 @@
     text-align: center;
 
     bottom: 0;
-}
-
-@mixin feature--phone() {
-    .feature {
-        width: 98%;
-    }
 }
