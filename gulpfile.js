@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var imagemin = require('gulp-imagemin');
 
 var minify = require('gulp-minify');
+var concat = require('gulp-concat');
 
 var del = require('del');
 
@@ -30,8 +31,9 @@ gulp.task('images', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(['src/js/**/*.js', 'src/js/**/*.mjs'])
-  .pipe(minify({ noSource: true }))
+  gulp.src(['src/js/**/*.js', '!src/js/vue.js'])
+  .pipe(concat('main.js'))
+  .pipe(minify({ ext: { min: '.js' }, noSource: true }))
   .pipe(gulp.dest('dist/js'));
 });
 
