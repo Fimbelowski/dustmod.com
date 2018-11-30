@@ -46,201 +46,20 @@
     <section id='features'>
       <div class='section-inner section-background'>
         <h2>Features</h2>
-        <div class='feature-grid' id='feature-grid'>
-          <div class='feature'>
-            <img src='dist/images/feature-images/multiplayer.jpg' class='feature-background' alt='placeholder'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-            <div class='feature-caption'>
-              <p>Online Multiplayer</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/quality-of-life.jpg' class='feature-background' alt='Dustmod Quality of Life Changes'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-            <div class='feature-caption'>
-              <p>Quality of Life Improvements</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/community-nexus.jpg' class='feature-background' alt='Dustmod Community Nexus'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-            <div class='feature-caption'>
-              <p>Community Nexus</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/editor.jpg' class='feature-background' alt='Dustmod Enhanced Editor'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-              <div class='feature-caption'>
-                <p>Enhanced Custom Level Editor</p>
-             </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/extended-leaderboards.jpg' class='feature-background' alt='Dustmod Extended Leaderboards'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-              <div class='feature-caption'>
-                <p>Extended Leaderboards</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/scripting.jpg' class='feature-background' alt='placeholder'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-              <div class='feature-caption'>
-                <p>Custom Level Scripting</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/daily-level.jpg' class='feature-background' alt='Dustmod Daily Level'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-              <div class='feature-caption'>
-                <p>Daily Featured Custom Level</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/tas-tools.jpg' class='feature-background' alt='Dustmod TAS Tools'>
-            <div class='feature-slider-controls'>
-              <div class='feature-slider-btn feature-slider-prev'>
-                <img src='dist/images/prev.png' class='slider-icon' alt='Previous image'>
-              </div>
-              <div class='feature-slider-btn feature-slider-next'>
-                <img src='dist/images/next.png' class='slider-icon' alt='Next image'>
-              </div>
-            </div>
-              <div class='feature-caption'>
-                <p>TAS Tools</p>
-              </div>
-          </div>
-        </div>
+        <feature-grid></feature-grid>
       </div>
     </section>
     <section id='download'>
       <div class='section-inner section-background l-download'>
         <h2>Download</h2>
         <a href='#download' class='scroll-link no-decoration'>
-          <button type='button' class='btn-main' @click="showOSChoices" :disabled='dlButtonDisabled'>
+          <button type='button' class='btn-main'>
             <p class='btn-main-text'>Download Dustmod</p>
             <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
           </button>
         </a>
-        <h3 v-cloak :class='OSChoiceGridStyleObj'>Choose Your Operating System</h2>
-        <div v-cloak :class='OSChoiceGridStyleObj' class='os-choice-grid'>
-          <div class='os-choice-option' id='windows'>
-            <a href='#windows' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn windows-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
-                <h3 class='windows-text'>Windows</h3>
-                <img src='dist/images/windows-logo.png' class='os-choice-img' alt='Windows logo'>
-              </button>
-            </a>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>Requires Win10 (Best Performance)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download>DirectX 12 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download>DirectX 12 (DRM-Free)</a>
-              </p>
-            </div>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>(The same as vanilla Dustforce)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_steam' download>DirectX 9 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_drmfree' download>DirectX 9 (DRM-Free)</a>
-              </p>
-            </div>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>(OpenGL Based)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload>SDL2 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download>SDL2 (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
-          <div class='os-choice-option' id='mac'>
-            <a href='#mac' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-                <h3 class='os-x-text'>Mac OS X</h3>
-                <img src='dist/images/apple-logo.png' class='os-choice-img' alt='Apple logo'>
-              </button>
-            </a>
-            <div class='dl-subsection osx-subsection' :class='macSubsectionStyleObj'>
-              <p>
-                <a href='https://dustkid.com/getdustmod/osx64_steam' download>64-Bit (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/osx64_drmfree' download>64-Bit (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
-          <div class='os-choice-option' id='linux'>
-            <a href='#linux' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-                <h3 class='linux-text'>Linux</h3>
-                <img src='dist/images/linux-logo.png' class='os-choice-img' alt='Linux logo'>
-              </button>
-            </a>
-            <div class='dl-subsection linux-subsection' :class='linuxSubsectionStyleObj'>
-              <p>
-                <a href='https://dustkid.com/getdustmod/linux64_steam' download>64-Bit (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/linux64_drmfree' download>64-Bit (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
-        </div>
+        <h3>Choose Your Operating System</h2>
+          <download-grid></download-grid>
       </div>
     </section>
     <section id='installation'>
