@@ -1,4 +1,5 @@
 Vue.component('download-grid', {
+  props: ['styles'],
   data: function() {
     return {
       osChoices: [
@@ -99,7 +100,7 @@ Vue.component('download-grid', {
       ]
     }
   },
-  template: "<div class='os-choice-grid'>\
+  template: "<div class='os-choice-grid' :class='styles'>\
             <download-choice\
             v-for='os in osChoices'\
             :key='os.id'\
@@ -113,12 +114,23 @@ Vue.component('download-choice', {
   props: ['os-info'],
   data: function() {
     return {
-
+      subsectionStyles: [
+        'is-hidden',
+        'is-collapsed'
+      ]
+    }
+  },
+  methods: {
+    expandSubsections: function() {
+      // This function will expand our subsections using the same technique as our expandOSChoiceGrid method below does.
+      window.requestAnimationFrame(function() {
+        this.subsectionStyles.splice(0, 1);
+      });
     }
   },
   template: "<div class='os-choice-option'>\
               <a :href='\"#\" + osInfo.id' class='scroll-link no-decoration'>\
-                <button type='button' class='os-btn' :class='osInfo.id + \"-btn\"'>\
+                <button type='button' class='os-btn' :class='osInfo.id + \"-btn\"' @click='expandSubsections'>\
                   <h3 :class='osInfo.id + \"-text\"'>{{ osInfo.os }}</h3>\
                   <img :src='osInfo.iconPath' class='os-choice-img' :alt='osInfo.imgAlt'>\
                 </button>\
@@ -127,19 +139,20 @@ Vue.component('download-choice', {
               v-for='subsection in osInfo.subsections'\
               :key='subsection.key'\
               :os='osInfo.id'\
+              :styles='subsectionStyles'\
               :subsectionInfo='subsection'>\
               </download-subsection>\
             </div>"
 });
 
 Vue.component('download-subsection', {
-  props: ['os', 'subsection-info'],
+  props: ['os', 'subsection-info', 'styles'],
   data: function() {
     return {
 
     }
   },
-  template: "<div class='dl-subsection' :class='os + \"-subsection\"'>\
+  template: "<div class='dl-subsection' :class='os + \"-subsection\", styles'>\
               <p v-for='link in subsectionInfo.links'>\
                 <a :href='link.href'>{{ link.text }}</a>\
               </p>\
@@ -150,7 +163,6 @@ window.onload = function() {
     var downloadVM = new Vue({
         el: '#download',
         data: {
-          osChoiceGridIsExpanded: false,
           osChoiceGridStyles: [
             'is-hidden',
             'is-collapsed'
@@ -158,7 +170,21 @@ window.onload = function() {
         },
         methods: {
           expandOSChoiceGrid: function() {
-            console.log('test');
+            /*
+              This function will expand the OS Choice Grid with a smooth scroll-down effect. To do this, we need to first need
+              to remove the 'is-hidden' class to show the content (with a max-height of 0). Then, we need to remove the 'is-collapsed'
+              class to make the transition smooth.
+
+              To do this we will use window.requestAnimationFrame to make sure that the class removals will happen on consecutive,
+              repaints and avoid the transition being choppy.
+            */
+            window.requestAnimationFrame(function() {
+              downloadVM.osChoiceGridStyles.splice(0, 1);
+
+              window.requestAnimationFrame(function() {
+                downloadVM.osChoiceGridStyles.splice(0, 1);
+              });
+            });
           }
         }
     });

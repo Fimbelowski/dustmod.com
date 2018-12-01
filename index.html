@@ -58,8 +58,8 @@
             <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
           </button>
         </a>
-        <h3>Choose Your Operating System</h2>
-          <download-grid></download-grid>
+        <h3 :class='osChoiceGridStyles'>Choose Your Operating System</h2>
+          <download-grid :styles='osChoiceGridStyles'></download-grid>
       </div>
     </section>
     <section id='installation'>
