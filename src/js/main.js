@@ -8,6 +8,7 @@ Vue.component('download-grid', {
           id: 'windows',
           iconPath: 'dist/images/windows-logo.png',
           imgAlt: 'Windows logo',
+          btnStyle: '',
           subsections: [
             {
               note: 'Requires Win10 (Best Performance)',
@@ -51,6 +52,10 @@ Vue.component('download-grid', {
               ],
               key: 'winSub2'
             }
+          ],
+          subsectionStyles: [
+            'is-hidden',
+            'is-collapsed'
           ]
         },
         {
@@ -58,6 +63,7 @@ Vue.component('download-grid', {
           id: 'mac',
           iconPath: 'dist/images/apple-logo.png',
           imgAlt: 'Apple logo',
+          btnStyle: '',
           subsections: [
             {
               note: '',
@@ -73,6 +79,10 @@ Vue.component('download-grid', {
               ],
               key: 'macSub0'
             }
+          ],
+          subsectionStyles: [
+            'is-hidden',
+            'is-collapsed'
           ]
         },
         {
@@ -80,6 +90,7 @@ Vue.component('download-grid', {
           id: 'linux',
           iconPath: 'dist/images/linux-logo.png',
           imgAlt: 'Linux logo',
+          btnStyle: '',
           subsections: [
             {
               note: '',
@@ -95,14 +106,35 @@ Vue.component('download-grid', {
               ],
               key: 'linuxSub0'
             }
+          ],
+          subsectionStyles: [
+            'is-hidden',
+            'is-collapsed'
           ]
         }
       ]
     }
   },
   methods: {
-    onOSClicked: function() {
-      console.log('test');
+    onOSClicked: function(os) {
+      for(var i = 0; i < this.osChoices.length; i++) {
+        if(this.osChoices[i].id === os) {
+          this.osChoices[i].btnStyle = 'is-focused'
+          this.expandOSSubsections(i);
+        } else {
+          this.osChoices[i].btnStyle = 'is-semi-transparent'
+        }
+      }
+    },
+    expandOSSubsections: function(index) {
+      /*
+        This method uses window.requestAnimationFrame to modify styles on consecutive repaints so that a smooth expanding
+        transition is achieved.
+      */
+      
+    },
+    collapseOSSubsections: function(index) {
+
     }
   },
   template: "<div class='os-choice-grid' :class='styles'>\
@@ -110,7 +142,8 @@ Vue.component('download-grid', {
             v-for='os in osChoices'\
             :key='os.id'\
             :id='os.id'\
-            :os-info='os'>\
+            :os-info='os'\
+            @os-clicked='onOSClicked'>\
             </download-choice>\
             </div>"
 });
@@ -127,12 +160,12 @@ Vue.component('download-choice', {
   },
   methods: {
     osClicked: function() {
-      this.$parent.$emit('os-clicked');
+      this.$emit('os-clicked', this.osInfo.id);
     }
   },
   template: "<div class='os-choice-option'>\
               <a :href='\"#\" + osInfo.id' class='scroll-link no-decoration'>\
-                <button type='button' class='os-btn' :class='osInfo.id + \"-btn\"' @click='osClicked'>\
+                <button type='button' class='os-btn' :class='[osInfo.id + \"-btn\", osInfo.btnStyle]' @click='osClicked'>\
                   <h3 :class='osInfo.id + \"-text\"'>{{ osInfo.os }}</h3>\
                   <img :src='osInfo.iconPath' class='os-choice-img' :alt='osInfo.imgAlt'>\
                 </button>\
@@ -164,36 +197,36 @@ Vue.component('download-subsection', {
 });
 
 window.onload = function() {
-  var downloadVM = new Vue({
-      el: '#download',
-      data: {
-        osChoiceGridStyles: [
-          'is-hidden',
-          'is-collapsed'
-        ],
-        focusedOS: ''
-      },
-      methods: {
-        expandOSChoiceGrid: function() {
-          /*
-            This function will expand the OS Choice Grid with a smooth scroll-down effect. To do this, we need to first need
-            to remove the 'is-hidden' class to show the content (with a max-height of 0). Then, we need to remove the 'is-collapsed'
-            class to make the transition smooth.
+  var vm = new Vue({
+    el: '#root',
+    data: {
+      osChoiceGridStyles: [
+        'is-hidden',
+        'is-collapsed'
+      ],
+      focusedOS: ''
+    },
+    methods: {
+      expandOSChoiceGrid: function() {
+        /*
+          This function will expand the OS Choice Grid with a smooth scroll-down effect. To do this, we need to first need
+          to remove the 'is-hidden' class to show the content (with a max-height of 0). Then, we need to remove the 'is-collapsed'
+          class to make the transition smooth.
 
-            To do this we will use window.requestAnimationFrame to make sure that the class removals will happen on consecutive,
-            repaints and avoid the transition being choppy.
-          */
+          To do this we will use window.requestAnimationFrame to make sure that the class removals will happen on consecutive,
+          repaints and avoid the transition being choppy.
+        */
+        window.requestAnimationFrame(function() {
+          vm.osChoiceGridStyles.splice(0, 1);
+
           window.requestAnimationFrame(function() {
-            downloadVM.osChoiceGridStyles.splice(0, 1);
-
-            window.requestAnimationFrame(function() {
-              downloadVM.osChoiceGridStyles.splice(0, 1);
-            });
+            vm.osChoiceGridStyles.splice(0, 1);
           });
-        },
-        focusOS: function() {
-          console.log('test');
-        }
+        });
+      },
+      focusOS: function(os) {
+        this.focusedOS = os;
       }
+    }
   });
 }
