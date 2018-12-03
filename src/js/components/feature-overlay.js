@@ -1,7 +1,9 @@
 Vue.component('feature-overlay', {
     props: [],
     data: function() {
-
+        return {
+            
+        }
     },
     template: '<div class="feature-slider-controls">\
                     <div class="feature-slider-btn feature-slider-prev">\

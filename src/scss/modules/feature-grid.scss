@@ -23,9 +23,22 @@
     overflow: hidden;
 }
 
-.feature-background {
+.feature-image {
     max-width: 100%;
     height: auto;
+}
+
+.feature-image-offscreen {
+    position: absolute;
+    bottom: 0;
+}
+
+.feature-image-offscreen-left {
+    right: 100%;
+}
+
+.feature-image-offscreen-right {
+    left: 100%;
 }
 
 .feature-caption {
