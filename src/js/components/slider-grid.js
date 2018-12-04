@@ -21,9 +21,9 @@ Vue.component('slider-grid', {
                 {
                     caption: 'Community Nexus',
                     images: [
-                        'dist/images/feature-images/community-nexus.jpg',
-                        'dist/images/feature-images/community-nexus.jpg',
-                        'dist/images/feature-images/community-nexus.jpg'
+                        'dist/images/feature-images/community-nexus-1.jpg',
+                        'dist/images/feature-images/community-nexus-2.jpg',
+                        'dist/images/feature-images/community-nexus-3.jpg'
                     ]
                 },
                 {
@@ -70,9 +70,9 @@ Vue.component('slider-grid', {
         }
     },
     template: '<div class="feature-grid">\
-                    <feature-slider\
+                    <feature\
                     v-for="feature in features"\
                     :feature-info="feature"\
-                    :key="feature.caption"></feature-slider>\
+                    :key="feature.caption"></feature>\
                 </div>'
 });

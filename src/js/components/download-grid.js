@@ -117,14 +117,14 @@ Vue.component('download-grid', {
     },
     methods: {
         onOSClicked: function(os) {
-        for(var i = 0; i < this.osChoices.length; i++) {
-            if(this.osChoices[i].id === os) {
-            this.osChoices[i].btnStyle = 'is-focused'
-            this.expandOSSubsections(i);
-            } else {
-            this.osChoices[i].btnStyle = 'is-semi-transparent'
+            for(var i = 0; i < this.osChoices.length; i++) {
+                if(this.osChoices[i].id === os) {
+                    this.osChoices[i].btnStyle = 'is-focused'
+                    this.expandOSSubsections(i);
+                } else {
+                 this.osChoices[i].btnStyle = 'is-semi-transparent'
+                }
             }
-        }
         },
         expandOSSubsections: function(index) {
         /*

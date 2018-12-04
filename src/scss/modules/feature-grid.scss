@@ -26,6 +26,8 @@
 .feature-image {
     max-width: 100%;
     height: auto;
+
+    transition: all 0.2s ease-in-out;
 }
 
 .feature-image-offscreen {
@@ -39,6 +41,14 @@
 
 .feature-image-offscreen-right {
     left: 100%;
+}
+
+.slide-left {
+    left: 0;
+}
+
+.slide-right {
+    right: 0;
 }
 
 .feature-caption {
