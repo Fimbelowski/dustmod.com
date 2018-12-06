@@ -8,7 +8,7 @@ Vue.component('download-grid', {
             id: 'windows',
             iconPath: 'dist/images/windows-logo.png',
             imgAlt: 'Windows logo',
-            isFocused: false,
+            btnState: '',
             subsections: [
                 {
                     note: 'Requires Win10 (Best Performance)',
@@ -63,7 +63,7 @@ Vue.component('download-grid', {
             id: 'mac',
             iconPath: 'dist/images/apple-logo.png',
             imgAlt: 'Apple logo',
-            isFocused: false,
+            btnState: '',
             subsections: [
                 {
                 note: '',
@@ -90,7 +90,7 @@ Vue.component('download-grid', {
             id: 'linux',
             iconPath: 'dist/images/linux-logo.png',
             imgAlt: 'Linux logo',
-            isFocused: false,
+            btnState: '',
             subsections: [
                 {
                 note: '',
@@ -116,6 +116,17 @@ Vue.component('download-grid', {
         }
     },
     methods: {
+        onOSClicked: function(osID) {
+            // When an os-clicked event is received, set the state of the os button that was clicked to 'is-focused'.
+            // Set all other button states to 'is-semi-transparent'.
+            for(var i = 0; i < this.osChoices.length; i++) {
+                if(this.osChoices[i].id === osID) {
+                    this.osChoices[i].btnState = 'is-focused';
+                } else {
+                    this.osChoices[i].btnState = 'is-semi-transparent';
+                }
+            }
+        }
     },
     template: "<div class='os-choice-grid' :class='styles'>\
                 <download-choice\
