@@ -19,11 +19,12 @@ Vue.component('download-choice', {
                   </button>\
                 </transition>\
                 </a>\
-                <download-subsection\
-                v-for='subsection in osInfo.subsections'\
-                :key='subsection.key'\
-                :os='osInfo.id'\
-                :subsectionInfo='subsection'>\
-                </download-subsection>\
+                <transition name='expand' v-for='subsection in osInfo.subsections' :key='subsection.key'>\
+                  <download-subsection\
+                  :os='osInfo.id'\
+                  :subsectionInfo='subsection'\
+                  v-if='osInfo.btnState === \"is-focused\"'>\
+                  </download-subsection>\
+                </transition>\
               </div>"
 });
