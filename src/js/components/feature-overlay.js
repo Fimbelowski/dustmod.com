@@ -7,10 +7,10 @@ Vue.component('feature-overlay', {
     },
     methods: {
         emitPrevClicked: function() {
-            this.$emit('prev-clicked');
+            this.$parent.$emit('prev-clicked', this.$parent.featureInfo.index);
         },
         emitNextClicked: function() {
-            this.$emit('next-clicked');
+            this.$parent.$emit('next-clicked', this.$parent.featureInfo.index);
         }
     },
     template: '<div class="feature-slider-controls">\

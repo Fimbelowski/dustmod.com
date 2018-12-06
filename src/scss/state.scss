@@ -8,17 +8,8 @@
   opacity: 0;
 }
 
-.focus-enter-active, .focus-leave-active {
-  transition: all 0.2s linear;
-}
-
-.focus-enter, .focus-leave-to {
-  opacity: .5;
-}
-
-.focus-enter-to {
-  opacity: 1;
-  transform: scale(1.1);
+.image-slider-move {
+  transition: transform 0.4s;
 }
 
 .is-focused {
