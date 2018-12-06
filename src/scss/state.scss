@@ -1,11 +1,24 @@
 // State rules
-.is-hidden {
-  display: none;
+.expand-enter-active, .expand-leave-active {
+  transition: all 0.2s linear;
 }
 
-.is-collapsed {
-  opacity: 0;
+.expand-enter, .expand-leave-to {
   max-height: 0;
+  opacity: 0;
+}
+
+.focus-enter-active, .focus-leave-active {
+  transition: all 0.2s linear;
+}
+
+.focus-enter, .focus-leave-to {
+  opacity: .5;
+}
+
+.focus-enter-to {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .is-focused {

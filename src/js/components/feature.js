@@ -2,7 +2,8 @@ Vue.component('feature', {
     props: ['feature-info'],
     data: function() {
         return {
-            currentIndex: 0
+            currentIndex: 0,
+            
         }
     },
     computed: {
@@ -49,7 +50,7 @@ Vue.component('feature', {
             }
         },
         slideLeft: function() {
-            
+
         }
     },
     template: '<div class="feature">\

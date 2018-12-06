@@ -54,13 +54,17 @@
         <div class='section-inner section-background l-download'>
           <h2>Download</h2>
           <a href='#download' class='scroll-link no-decoration'>
-            <button type='button' class='btn-main' @click='expandOSChoiceGrid'>
+            <button type='button' class='btn-main' @click='choicesAreShown = true'>
               <p class='btn-main-text'>Download Dustmod</p>
               <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
             </button>
           </a>
-          <h3 :class='osChoiceGridStyles'>Choose Your Operating System</h2>
-            <download-grid :styles='osChoiceGridStyles'></download-grid>
+          <transition name='expand'>
+            <h3 v-if='choicesAreShown'>Choose Your Operating System</h3>
+          </transition>
+          <transition name='expand'>
+            <download-grid v-if='choicesAreShown'></download-grid>
+          </transition>
         </div>
       </section>
       <section id='installation'>
