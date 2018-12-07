@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Dustmod! an in-game mod for Dustforce DX</title>
+    <title>An in-game mod for Dustforce DX | Dustmod</title>
     <meta name='description' content="Dustmod is an in-game mod for Dustforce DX that enhances and extends the game with additional tools, game-modes and quality of life changes.">
     <meta name='keywords' content='Dustmod, Dustforce, DX, mod, steam, windows, mac, linux'>
     <meta name='author' content='Christopher Fimbel'>
@@ -11,8 +11,8 @@
     <link rel='stylesheet' type='text/css' href='dist/css/styles.css'>
     <link rel='icon' type='image/png' href='dist/images/apple-sprite.png'>
 
-    <script src='dist/js/vue-min.js'></script>
-    <script src='dist/js/main-min.js'></script>
+    <script src='dist/js/vue.js'></script>
+    <script src='dist/js/main.js'></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116536708-3"></script>
@@ -31,176 +31,66 @@
         <h1>Dustmod</h1>
       </div>
     </header>
-    <section id='about'>
-      <div class='section-inner section-background l-about'>
-        <h2>What is Dustmod?</h2>
-        <blockquote class='block-text'>
-          Dustmod is a hobby project that came as a natural extension to dustkid.com, a website that I operate that collects all sorts of Dustforce related statistics.
-          While integrating dustkid.com curated leaderboards into Dustmod and extending the replay system to give richer metadata was an initial goal, the project has
-          expanded to include quite a variety of extended functionality on top of the base game. It's my hope that Dustmod continues to be a way to launch deep into
-          the nearly unlimited content that Dustforce and the surrounding community offers.
-          <cite>msg555, Creator of Dustmod and <a href='https://dustkid.com/' target='_blank'>dustkid.com</a></cite>
-        </blockquote>
-      </div>
-    </section>
-    <section id='features'>
-      <div class='section-inner section-background'>
-        <h2>Features</h2>
-        <div class='feature-grid'>
-          <div class='feature'>
-            <img src='dist/images/feature-images/multiplayer.jpg' class='feature-background' alt='placeholder'>
-            <div class='feature-overlay'>
-              <p>Online Multiplayer</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/quality-of-life.jpg' class='feature-background' alt='Dustmod Quality of Life Changes'>
-            <div class='feature-overlay'>
-              <p>Quality of Life Improvements</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/community-nexus.jpg' class='feature-background' alt='Dustmod Community Nexus'>
-            <div class='feature-overlay'>
-              <p>Community Nexus</p>
-            </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/editor.jpg' class='feature-background' alt='Dustmod Enhanced Editor'>
-              <div class='feature-overlay'>
-                <p>Enahanced Custom Level Editor</p>
-             </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/extended-leaderboards.jpg' class='feature-background' alt='Dustmod Extended Leaderboards'>
-              <div class='feature-overlay'>
-                <p>Extended Leaderboards</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/scripting.jpg' class='feature-background' alt='placeholder'>
-              <div class='feature-overlay'>
-                <p>Custom Level Scripting</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/daily-level.jpg' class='feature-background' alt='Dustmod Daily Level'>
-              <div class='feature-overlay'>
-                <p>Daily Featured Custom Level</p>
-              </div>
-          </div>
-          <div class='feature'>
-            <img src='dist/images/feature-images/tas-tools.jpg' class='feature-background' alt='Dustmod TAS Tools'>
-              <div class='feature-overlay'>
-                <p>TAS Tools</p>
-              </div>
-          </div>
+    <main id='root'>
+      <section id='about'>
+        <div class='section-inner section-background l-about'>
+          <h2>What is Dustmod?</h2>
+          <blockquote class='block-text'>
+            Dustmod is a hobby project that came as a natural extension to dustkid.com, a website that I operate that collects all sorts of Dustforce related statistics.
+            While integrating dustkid.com curated leaderboards into Dustmod and extending the replay system to give richer metadata was an initial goal, the project has
+            expanded to include quite a variety of extended functionality on top of the base game. It's my hope that Dustmod continues to be a way to launch deep into
+            the nearly unlimited content that Dustforce and the surrounding community offers.
+            <cite>msg555, Creator of Dustmod and <a href='https://dustkid.com/' target='_blank'>dustkid.com</a></cite>
+          </blockquote>
         </div>
-      </div>
-    </section>
-    <section id='download'>
-      <div class='section-inner section-background l-download'>
-        <h2>Download</h2>
-        <a href='#download' class='scroll-link no-decoration'>
-          <button type='button' class='btn-main' @click="showOSChoices" :disabled='dlButtonDisabled'>
-            <p class='btn-main-text'>Download Dustmod</p>
-            <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
-          </button>
-        </a>
-        <h3 v-cloak :class='OSChoiceGridStyleObj'>Choose Your Operating System</h2>
-        <div v-cloak :class='OSChoiceGridStyleObj' class='os-choice-grid'>
-          <div class='os-choice-option' id='windows'>
-            <a href='#windows' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn windows-btn' :class='windowsStyleObj' @click='focusOSChoice("windows")'>
-                <h3 class='windows-text'>Windows</h3>
-                <img src='dist/images/windows-logo.png' class='os-choice-img' alt='Windows logo'>
-              </button>
-            </a>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>Requires Win10 (Best Performance)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_steam' download>DirectX 12 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_dx12_drmfree' download>DirectX 12 (DRM-Free)</a>
-              </p>
-            </div>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>(The same as vanilla Dustforce)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_steam' download>DirectX 9 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_drmfree' download>DirectX 9 (DRM-Free)</a>
-              </p>
-            </div>
-            <div class='dl-subsection windows-subsection' :class='windowsSubsectionStyleObj'>
-              <p class='dl-subsection-note'>(OpenGL Based)</p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_steam' doanload>SDL2 (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/win32_sdl2_drmfree' download>SDL2 (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
-          <div class='os-choice-option' id='mac'>
-            <a href='#mac' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn os-x-btn' :class='macStyleObj' @click='focusOSChoice("mac")'>
-                <h3 class='os-x-text'>Mac OS X</h3>
-                <img src='dist/images/apple-logo.png' class='os-choice-img' alt='Apple logo'>
-              </button>
-            </a>
-            <div class='dl-subsection osx-subsection' :class='macSubsectionStyleObj'>
-              <p>
-                <a href='https://dustkid.com/getdustmod/osx64_steam' download>64-Bit (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/osx64_drmfree' download>64-Bit (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
-          <div class='os-choice-option' id='linux'>
-            <a href='#linux' class='scroll-link no-decoration'>
-              <button type='button' class='os-btn linux-btn' :class='linuxStyleObj' @click='focusOSChoice("linux")'>
-                <h3 class='linux-text'>Linux</h3>
-                <img src='dist/images/linux-logo.png' class='os-choice-img' alt='Linux logo'>
-              </button>
-            </a>
-            <div class='dl-subsection linux-subsection' :class='linuxSubsectionStyleObj'>
-              <p>
-                <a href='https://dustkid.com/getdustmod/linux64_steam' download>64-Bit (Steam)</a>
-              </p>
-              <p>
-                <a href='https://dustkid.com/getdustmod/linux64_drmfree' download>64-Bit (DRM-Free)</a>
-              </p>
-            </div>
-          </div>
+      </section>
+      <section id='features'>
+        <div class='section-inner section-background'>
+          <h2>Features</h2>
+          <feature-grid></feature-grid>
         </div>
-      </div>
-    </section>
-    <section id='installation'>
-      <div class='section-inner section-background l-installation'>
-        <h2>Installation</h2>
-        <ol>
-          <li>Download the Dustmod version suitable for your OS</li>
-          <li>Unpack the contained files into the directory where Dustforce is already installed</li>
-        </ol>
-        <p class='block-text'>If you’re playing on Steam you might like to add the Dustmod executable to your game launcher by navigating to “Games” -> “Add a Non-Steam Game to my Library” and finding the Dustmod executable (typically at “C:\Program Files (x86)\Steam\steamapps\common\Dustforce\dustmod.exe”). Steam will still recognize the game as Dustforce once the game is running.</p>
-      </div>
-    </section>
-    <section id='support'>
-      <div class='section-inner section-background'>
-        <h2>Support</h2>
-        <p>If you need any assistance installing or troubleshooting Dustmod please feel free to click the button below to join the Dustforce Discord server for help.</p>
-        <a href='https://discord.gg/4F9WQeV' class='no-decoration' rel='external' target='_blank'>
-          <button type='button' class='btn-main'>
-            <p class='btn-main-text'>Dustforce Discord Server</p>
-            <img src='dist/images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
-          </button>
-        </a>
-      </div>
-    </section>
+      </section>
+      <section id='download' @os-clicked='focusOS'>
+        <div class='section-inner section-background l-download'>
+          <h2>Download</h2>
+          <a href='#download' class='scroll-link no-decoration'>
+            <button type='button' class='btn-main' @click='choicesAreShown = true' :disabled='choicesAreShown'>
+              <p class='btn-main-text'>Download Dustmod</p>
+              <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
+            </button>
+            <p>Version 8.7.1</p>
+          </a>
+          <transition name='expand'>
+            <h3 v-if='choicesAreShown'>Choose Your Operating System</h3>
+          </transition>
+          <transition name='expand'>
+            <download-grid v-if='choicesAreShown'></download-grid>
+          </transition>
+        </div>
+      </section>
+      <section id='installation'>
+        <div class='section-inner section-background l-installation'>
+          <h2>Installation</h2>
+          <ol>
+            <li>Download the Dustmod version suitable for your OS</li>
+            <li>Unpack the contained files into the directory where Dustforce is already installed</li>
+          </ol>
+          <p class='block-text'>If you’re playing on Steam you might like to add the Dustmod executable to your game launcher by navigating to “Games” -> “Add a Non-Steam Game to my Library” and finding the Dustmod executable (typically at “C:\Program Files (x86)\Steam\steamapps\common\Dustforce\dustmod.exe”). Steam will still recognize the game as Dustforce once the game is running.</p>
+        </div>
+      </section>
+      <section id='support'>
+        <div class='section-inner section-background'>
+          <h2>Support</h2>
+          <p>If you need any assistance installing or troubleshooting Dustmod please feel free to click the button below to join the Dustforce Discord server for help.</p>
+          <a href='https://discord.gg/4F9WQeV' class='no-decoration' rel='external' target='_blank'>
+            <button type='button' class='btn-main'>
+              <p class='btn-main-text'>Dustforce Discord Server</p>
+              <img src='dist/images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
+            </button>
+          </a>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class='section-inner'>
         <p>Copyright &copy; <span>Christopher Fimbel 2018</span></p>
