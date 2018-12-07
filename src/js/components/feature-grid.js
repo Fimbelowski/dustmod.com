@@ -1,4 +1,4 @@
-Vue.component('slider-grid', {
+Vue.component('feature-grid', {
     data: function() {
         return {
             features: [
