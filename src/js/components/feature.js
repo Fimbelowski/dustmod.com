@@ -14,7 +14,8 @@ Vue.component('feature', {
                         :src="image.path"\
                         class="feature-image"\
                         :key="image.key"\
-                        :style="{ zIndex: image.zIndex }">\
+                        :style="{ zIndex: image.zIndex }"\
+                        :alt="\'Dustmod \' + featureInfo.caption">\
                     </transition-group>\
                     <feature-overlay></feature-overlay>\
                     <div class="feature-caption">\
