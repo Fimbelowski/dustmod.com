@@ -20,19 +20,24 @@
 
     border-radius: 5px;
     border: solid 1px $gray-700;
-    overflow: hidden;
 }
 
 .feature-images {
     display: flex;
     flex-direction: row;
+
     justify-content: center;
     align-items: flex-start;
+
+    overflow: hidden;
+    min-width: 0;
 }
 
 .feature-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+
+    flex: 0 0 auto;
 }
 
 .feature-caption {
