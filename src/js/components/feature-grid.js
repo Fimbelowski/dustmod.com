@@ -8,19 +8,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/multiplayer-1.jpg',
-                            subcaption: 'Victory',
+                            subcaption: 'Four Player',
                             key: 'multiplayer-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-2.jpg',
-                            subcaption: 'Containment',
+                            subcaption: 'Two Player',
                             key: 'multiplayer-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-3.jpg',
-                            subcaption: 'Construction Site',
+                            subcaption: 'Three Player',
                             key: 'multiplayer-3',
                             zIndex: 0
                         }
@@ -132,20 +132,32 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/scripting-1.jpg',
-                            subcaption: 'Custom Visual Elements',
+                            subcaption: 'Multiple Characters',
                             key: 'scripting-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-2.jpg',
-                            subcaption: 'Multiple Characters',
+                            subcaption: 'Reactive Elements',
                             key: 'scripting-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-3.jpg',
-                            subcaption: 'Replace',
+                            subcaption: 'Custom Visual Effects',
                             key: 'scripting-3',
+                            zIndex: 0
+                        },
+                        {
+                            path: 'dist/images/feature-images/scripting-4.jpg',
+                            subcaption: 'Custom Characters/Movesets',
+                            key: 'scripting-4',
+                            zIndex: 0
+                        },
+                        {
+                            path: 'dist/images/feature-images/scripting-5.jpg',
+                            subcaption: 'Custom Visual Elements',
+                            key: 'scripting-5',
                             zIndex: 0
                         }
                     ],
