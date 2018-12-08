@@ -29,7 +29,7 @@ Vue.component('feature-grid', {
                 },
                 {
                     index: 1,
-                    caption: 'Quality of Life Changes',
+                    caption: 'Quality of Life',
                     images: [
                         {
                             path: 'dist/images/feature-images/quality-of-life-1.jpg',
@@ -103,31 +103,6 @@ Vue.component('feature-grid', {
                 },
                 {
                     index: 3,
-                    caption: 'Enhanced Custom Level Editor',
-                    images: [
-                        {
-                            path: 'dist/images/feature-images/editor-1.jpg',
-                            subcaption: 'Replace',
-                            key: 'editor-1',
-                            zIndex: 0
-                        },
-                        {
-                            path: 'dist/images/feature-images/editor-2.jpg',
-                            subcaption: 'Replace',
-                            key: 'editor-2',
-                            zIndex: 0
-                        },
-                        {
-                            path: 'dist/images/feature-images/editor-3.jpg',
-                            subcaption: 'Replace',
-                            key: 'editor-3',
-                            zIndex: 0
-                        }
-                    ],
-                    controlsAreLocked: false
-                },
-                {
-                    index: 4,
                     caption: 'Extended Leaderboards',
                     images: [
                         {
@@ -152,7 +127,7 @@ Vue.component('feature-grid', {
                     controlsAreLocked: false
                 },
                 {
-                    index: 5,
+                    index: 4,
                     caption: 'Custom Level Scripting',
                     images: [
                         {
@@ -177,7 +152,7 @@ Vue.component('feature-grid', {
                     controlsAreLocked: false
                 },
                 {
-                    index: 6,
+                    index: 5,
                     caption: 'Daily Featured Custom Level',
                     images: [
                         {
@@ -214,7 +189,7 @@ Vue.component('feature-grid', {
                     controlsAreLocked: false
                 },
                 {
-                    index: 7,
+                    index: 6,
                     caption: 'TAS Tools',
                     images: [
                         {
