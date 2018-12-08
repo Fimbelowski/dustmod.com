@@ -8,16 +8,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/multiplayer-1.jpg',
+                            subcaption: 'Victory',
                             key: 'multiplayer-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-2.jpg',
+                            subcaption: 'Containment',
                             key: 'multiplayer-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-3.jpg',
+                            subcaption: 'Construction Site',
                             key: 'multiplayer-3',
                             zIndex: 0
                         }
@@ -30,26 +33,31 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/quality-of-life-1.jpg',
+                            subcaption: 'Input Display',
                             key: 'quality-of-life-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/quality-of-life-2.jpg',
+                            subcaption: 'Replay Ghosts',
                             key: 'quality-of-life-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/quality-of-life-3.jpg',
+                            subcaption: 'In-Game Configuration',
                             key: 'quality-of-life-3',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/quality-of-life-4.jpg',
+                            subcaption: 'Extended Virtual Tome',
                             key: 'quality-of-life-4',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/quality-of-life-5.jpg',
+                            subcaption: 'Game Save Recovery/Reset',
                             key: 'quality-of-life-5',
                             zIndex: 0
                         }
@@ -62,26 +70,31 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/community-nexus-1.jpg',
+                            subcaption: 'Single Screen Map Pack',
                             key: 'community-nexus-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-2.jpg',
+                            subcaption: 'Dustforce Arcade',
                             key: 'community-nexus-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-3.jpg',
+                            subcaption: 'Entrance',
                             key: 'community-nexus-3',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-4.jpg',
+                            subcaption: 'Dark Forest Map Pack',
                             key: 'community-nexus-4',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-5.jpg',
+                            subcaption: 'CMR 54 Nexus',
                             key: 'community-nexus-5',
                             zIndex: 0
                         }
@@ -94,16 +107,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/editor-1.jpg',
+                            subcaption: 'Replace',
                             key: 'editor-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/editor-2.jpg',
+                            subcaption: 'Replace',
                             key: 'editor-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/editor-3.jpg',
+                            subcaption: 'Replace',
                             key: 'editor-3',
                             zIndex: 0
                         }
@@ -116,16 +132,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/leaderboard-1.jpg',
+                            subcaption: 'Lowjump Leaderboards',
                             key: 'leaderboard-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/leaderboard-2.jpg',
+                            subcaption: 'Character Filtering',
                             key: 'leaderboard-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/leaderboard-3.jpg',
+                            subcaption: 'TAS Leaderboards',
                             key: 'leaderboard-3',
                             zIndex: 0
                         }
@@ -138,16 +157,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/scripting-1.jpg',
+                            subcaption: 'Custom Visual Elements',
                             key: 'scripting-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-2.jpg',
+                            subcaption: 'Multiple Characters',
                             key: 'scripting-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-3.jpg',
+                            subcaption: 'Replace',
                             key: 'scripting-3',
                             zIndex: 0
                         }
@@ -160,26 +182,31 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/daily-1.jpg',
+                            subcaption: 'Leaderboard',
                             key: 'daily-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-2.jpg',
+                            subcaption: 'History',
                             key: 'daily-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-3.jpg',
+                            subcaption: 'Entrance',
                             key: 'daily-3',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-4.jpg',
+                            subcaption: 'Featured Level on 12/06/2018',
                             key: 'daily-4',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-5.jpg',
+                            subcaption: 'Leaderboard Location',
                             key: 'daily-5',
                             zIndex: 0
                         }
@@ -192,16 +219,19 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/tas-tools-1.jpg',
+                            subcaption: 'Frame Advance in Use',
                             key: 'tas-tools-1',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/tas-tools-2.jpg',
+                            subcaption: 'Frame Advance Menu',
                             key: 'tas-tools-2',
                             zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/tas-tools-3.jpg',
+                            subcaption: 'Debug Data',
                             key: 'tas-tools-3',
                             zIndex: 0
                         }

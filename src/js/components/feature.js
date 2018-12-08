@@ -5,6 +5,11 @@ Vue.component('feature', {
             
         }
     },
+    computed: {
+        middleImageIndex: function() {
+            return Math.floor(this.featureInfo.images.length / 2);
+        }
+    },
     template: '<div class="feature">\
                     <transition-group\
                     name="image-slider"\
@@ -20,7 +25,7 @@ Vue.component('feature', {
                     <feature-overlay></feature-overlay>\
                     <div class="feature-caption-container">\
                         <div class="feature-caption-background">\
-                            <p>{{ featureInfo.caption }}</p>\
+                            <p>{{ featureInfo.caption }} - <span>{{ featureInfo.images[middleImageIndex].subcaption }}</span></p>\
                         </div>\
                     </div>\
                 </div>'
