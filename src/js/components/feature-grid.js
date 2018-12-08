@@ -42,6 +42,16 @@ Vue.component('feature-grid', {
                             path: 'dist/images/feature-images/quality-of-life-3.jpg',
                             key: 'quality-of-life-3',
                             zIndex: 0
+                        },
+                        {
+                            path: 'dist/images/feature-images/quality-of-life-4.jpg',
+                            key: 'quality-of-life-4',
+                            zIndex: 0
+                        },
+                        {
+                            path: 'dist/images/feature-images/quality-of-life-5.jpg',
+                            key: 'quality-of-life-5',
+                            zIndex: 0
                         }
                     ],
                     controlsAreLocked: false
