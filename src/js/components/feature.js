@@ -18,8 +18,10 @@ Vue.component('feature', {
                         :alt="\'Dustmod \' + featureInfo.caption">\
                     </transition-group>\
                     <feature-overlay></feature-overlay>\
-                    <div class="feature-caption">\
-                        <p>{{ featureInfo.caption }}</p>\
+                    <div class="feature-caption-container">\
+                        <div class="feature-caption-background">\
+                            <p>{{ featureInfo.caption }}</p>\
+                        </div>\
                     </div>\
                 </div>'
 });
