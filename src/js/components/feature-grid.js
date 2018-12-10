@@ -9,11 +9,11 @@ Vue.component('feature-grid', {
                         {
                             path: 'https://i.imgur.com/LPYEarp.jpg',
                             subcaption: 'Four Player',
-                            key: 'multiplayer-1',
+                            key: 'multiplayer',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/multiplayer-2.jpg',
+                            path: 'https://i.imgur.com/xUWfM1d.jpg',
                             subcaption: 'Two Player',
                             key: 'multiplayer-2',
                             zIndex: 0
@@ -44,7 +44,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/quality-of-life-3.jpg',
+                            path: 'https://i.imgur.com/w8DrmnM.jpg',
                             subcaption: 'In-Game Configuration',
                             key: 'quality-of-life-3',
                             zIndex: 0
@@ -81,7 +81,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/community-nexus-3.jpg',
+                            path: 'https://i.imgur.com/mqMOfi8.jpg',
                             subcaption: 'Entrance',
                             key: 'community-nexus-3',
                             zIndex: 0
@@ -112,7 +112,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/leaderboard-2.jpg',
+                            path: 'https://i.imgur.com/C5EdbzE.jpg',
                             subcaption: 'Character Filtering',
                             key: 'leaderboard-2',
                             zIndex: 0
@@ -143,7 +143,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/scripting-3.jpg',
+                            path: 'https://i.imgur.com/530yqh9.jpg',
                             subcaption: 'Custom Visual Effects',
                             key: 'scripting-3',
                             zIndex: 0
@@ -180,7 +180,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/daily-3.jpg',
+                            path: 'https://i.imgur.com/iM57jo6.jpg',
                             subcaption: 'Entrance',
                             key: 'daily-3',
                             zIndex: 0
@@ -211,7 +211,7 @@ Vue.component('feature-grid', {
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/tas-tools-2.jpg',
+                            path: 'https://i.imgur.com/g1g6mQP.jpg',
                             subcaption: 'Frame Advance Menu',
                             key: 'tas-tools-2',
                             zIndex: 0
