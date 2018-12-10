@@ -222,7 +222,7 @@ Vue.component('feature-grid', {
             }
         },
         addImageZIndices: function() {
-            // For each image in each feature, add a zIndex proprty with an initial value of 0
+            // For each image in each feature, add a 'zIndex' property with an initial value of 0
             for(var i = 0; i < this.features.length; i++) {
                 for(var j = 0; j < this.features[i].images.length; j++) {
                     this.features[i].images[j].zIndex = 0;
@@ -244,12 +244,35 @@ Vue.component('feature-grid', {
                     }
                 }
             }
+        },
+        addImageLoadBool: function() {
+            // For each image in each feature, add a 'canLoad' property with an initial value of false
+            for(var i = 0; i < this.features.length; i++) {
+                for(var j = 0; j < this.features[i].images.length; j++) {
+                    this.features[i].images[j].canLoad = true;
+                }
+            }
+        },
+        loadAllImages: function() {
+            // For each image in each feature, set the 'canLoad' property to true
+            for(var i = 0; i < this.features.length; i++) {
+                for(var j = 0; j < this.features[i].images.length; j++) {
+                    this.features[i].images[j].canLoad = true;
+                }
+            }
         }
     },
     created: function() {
+        this.addFeatureIndices();
         this.addControlLockBool();
         this.addImageZIndices();
         this.calcMedianImageIndices();
+        this.addImageLoadBool();
+    },
+    mounted: function() {
+        this.$nextTick(function() {
+            this.loadAllImages();
+        });
     },
     template: '<div class="feature-grid">\
                     <feature\
@@ -257,7 +280,6 @@ Vue.component('feature-grid', {
                     :feature-info="feature"\
                     :key="feature.caption"\
                     @prev-clicked="slideImagesLeft"\
-                    @next-clicked="slideImagesRight"\
-                    @transition-end="resetAllZIndexes"></feature>\
+                    @next-clicked="slideImagesRight"></feature>\
                 </div>'
 });
