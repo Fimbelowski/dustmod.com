@@ -3,227 +3,155 @@ Vue.component('feature-grid', {
         return {
             features: [
                 {
-                    index: 0,
                     caption: 'Online Multiplayer',
                     images: [
                         {
                             path: 'https://i.imgur.com/LPYEarp.jpg',
-                            subcaption: 'Four Player',
-                            key: 'multiplayer',
-                            zIndex: 0
+                            subcaption: 'Four Player'
                         },
                         {
                             path: 'https://i.imgur.com/xUWfM1d.jpg',
-                            subcaption: 'Two Player',
-                            key: 'multiplayer-2',
-                            zIndex: 0
+                            subcaption: 'Two Player'
                         },
                         {
                             path: 'https://i.imgur.com/hvHh43e.jpg',
-                            subcaption: 'Three Player',
-                            key: 'multiplayer-3',
-                            zIndex: 0
+                            subcaption: 'Three Player'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 1,
                     caption: 'Quality of Life',
                     images: [
                         {
                             path: 'https://i.imgur.com/XU9k2qR.jpg',
-                            subcaption: 'Input Display',
-                            key: 'quality-of-life-1',
-                            zIndex: 0
+                            subcaption: 'Input Display'
                         },
                         {
                             path: 'https://i.imgur.com/EU71x3f.jpg',
-                            subcaption: 'Replay Ghosts',
-                            key: 'quality-of-life-2',
-                            zIndex: 0
+                            subcaption: 'Replay Ghosts'
                         },
                         {
                             path: 'https://i.imgur.com/w8DrmnM.jpg',
-                            subcaption: 'In-Game Configuration',
-                            key: 'quality-of-life-3',
-                            zIndex: 0
+                            subcaption: 'In-Game Configuration'
                         },
                         {
                             path: 'https://i.imgur.com/HOFV6Z3.jpg',
-                            subcaption: 'Extended Virtual Tome',
-                            key: 'quality-of-life-4',
-                            zIndex: 0
+                            subcaption: 'Extended Virtual Tome'
                         },
                         {
                             path: 'https://i.imgur.com/liKAR9z.jpg',
-                            subcaption: 'Game Save Recovery/Reset',
-                            key: 'quality-of-life-5',
-                            zIndex: 0
+                            subcaption: 'Game Save Recovery/Reset'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 2,
                     caption: 'Community Nexus',
                     images: [
                         {
                             path: 'https://i.imgur.com/gZILxzD.jpg',
-                            subcaption: 'Single Screen Map Pack',
-                            key: 'community-nexus-1',
-                            zIndex: 0
+                            subcaption: 'Single Screen Map Pack'
                         },
                         {
                             path: 'https://i.imgur.com/oFrc4K4.jpg',
-                            subcaption: 'Dustforce Arcade',
-                            key: 'community-nexus-2',
-                            zIndex: 0
+                            subcaption: 'Dustforce Arcade'
                         },
                         {
                             path: 'https://i.imgur.com/mqMOfi8.jpg',
-                            subcaption: 'Entrance',
-                            key: 'community-nexus-3',
-                            zIndex: 0
+                            subcaption: 'Entrance'
                         },
                         {
                             path: 'https://i.imgur.com/vhJ2r6y.jpg',
-                            subcaption: 'Dark Forest Map Pack',
-                            key: 'community-nexus-4',
-                            zIndex: 0
+                            subcaption: 'Dark Forest Map Pack'
                         },
                         {
                             path: 'https://i.imgur.com/YwmI08Z.jpg',
-                            subcaption: 'CMR 54 Nexus',
-                            key: 'community-nexus-5',
-                            zIndex: 0
+                            subcaption: 'CMR 54 Nexus'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 3,
                     caption: 'Extended Leaderboards',
                     images: [
                         {
                             path: 'https://i.imgur.com/GJPwHiZ.jpg',
-                            subcaption: 'Lowjump Leaderboards',
-                            key: 'leaderboard-1',
-                            zIndex: 0
+                            subcaption: 'Lowjump Leaderboards'
                         },
                         {
                             path: 'https://i.imgur.com/C5EdbzE.jpg',
-                            subcaption: 'Character Filtering',
-                            key: 'leaderboard-2',
-                            zIndex: 0
+                            subcaption: 'Character Filtering'
                         },
                         {
                             path: 'https://i.imgur.com/R0ZzkD0.jpg',
-                            subcaption: 'TAS Leaderboards',
-                            key: 'leaderboard-3',
-                            zIndex: 0
+                            subcaption: 'TAS Leaderboards'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 4,
                     caption: 'Custom Level Scripting',
                     images: [
                         {
                             path: 'https://i.imgur.com/Fx7NZhw.jpg',
-                            subcaption: 'Multiple Characters',
-                            key: 'scripting-1',
-                            zIndex: 0
+                            subcaption: 'Multiple Characters'
                         },
                         {
                             path: 'https://i.imgur.com/ZShcg93.jpg',
-                            subcaption: 'Reactive Elements',
-                            key: 'scripting-2',
-                            zIndex: 0
+                            subcaption: 'Reactive Elements'
                         },
                         {
                             path: 'https://i.imgur.com/530yqh9.jpg',
-                            subcaption: 'Custom Visual Effects',
-                            key: 'scripting-3',
-                            zIndex: 0
+                            subcaption: 'Custom Visual Effects'
                         },
                         {
                             path: 'https://i.imgur.com/30zU2du.jpg',
-                            subcaption: 'Custom Characters/Movesets',
-                            key: 'scripting-4',
-                            zIndex: 0
+                            subcaption: 'Custom Characters/Movesets'
                         },
                         {
                             path: 'https://i.imgur.com/KYkeUq5.jpg',
-                            subcaption: 'Custom Visual Elements',
-                            key: 'scripting-5',
-                            zIndex: 0
+                            subcaption: 'Custom Visual Elements'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 5,
                     caption: 'Daily Featured Custom Level',
                     images: [
                         {
                             path: 'https://i.imgur.com/YJvQjoc.jpg',
-                            subcaption: 'Leaderboard',
-                            key: 'daily-1',
-                            zIndex: 0
+                            subcaption: 'Leaderboard'
                         },
                         {
                             path: 'https://i.imgur.com/xIqxDS7.jpg',
-                            subcaption: 'History',
-                            key: 'daily-2',
-                            zIndex: 0
+                            subcaption: 'History'
                         },
                         {
                             path: 'https://i.imgur.com/iM57jo6.jpg',
-                            subcaption: 'Entrance',
-                            key: 'daily-3',
-                            zIndex: 0
+                            subcaption: 'Entrance'
                         },
                         {
                             path: 'https://i.imgur.com/FYWqhho.jpg',
-                            subcaption: 'Featured Level on 12/06/2018',
-                            key: 'daily-4',
-                            zIndex: 0
+                            subcaption: 'Featured Level on 12/06/2018'
                         },
                         {
                             path: 'https://i.imgur.com/JVSBmFT.jpg',
-                            subcaption: 'Leaderboard Location',
-                            key: 'daily-5',
-                            zIndex: 0
+                            subcaption: 'Leaderboard Location'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 },
                 {
-                    index: 6,
                     caption: 'TAS Tools',
                     images: [
                         {
                             path: 'https://i.imgur.com/yA4ABcz.jpg',
-                            subcaption: 'Frame Advance in Use',
-                            key: 'tas-tools-1',
-                            zIndex: 0
+                            subcaption: 'Frame Advance in Use'
                         },
                         {
                             path: 'https://i.imgur.com/g1g6mQP.jpg',
-                            subcaption: 'Frame Advance Menu',
-                            key: 'tas-tools-2',
-                            zIndex: 0
+                            subcaption: 'Frame Advance Menu'
                         },
                         {
                             path: 'https://i.imgur.com/yA4ABcz.jpg',
-                            subcaption: 'Debug Data',
-                            key: 'tas-tools-3',
-                            zIndex: 0
+                            subcaption: 'Debug Data'
                         }
-                    ],
-                    controlsAreLocked: false
+                    ]
                 }
             ]
         }
@@ -280,7 +208,48 @@ Vue.component('feature-grid', {
             for(var i = 0; i < this.features[index].images.length; i++) {
                 this.features[index].images[i].zIndex = 0;
             }
+        },
+        addFeatureIndices: function() {
+            // For each feature, add a property with the feature's index in the feature array
+            for(var i = 0; i < this.features.length; i++) {
+                this.features[i].index = i;
+            }
+        },
+        addControlLockBool: function() {
+            // For each feature, add a 'controlsAreLocked' property with an initial value of false
+            for(var i = 0; i < this.features.length; i++) {
+                this.features[i].controlsAreLocked = false;
+            }
+        },
+        addImageZIndices: function() {
+            // For each image in each feature, add a zIndex proprty with an initial value of 0
+            for(var i = 0; i < this.features.length; i++) {
+                for(var j = 0; j < this.features[i].images.length; j++) {
+                    this.features[i].images[j].zIndex = 0;
+                }
+            }
+        },
+        calcMedianImageIndices: function() {
+            // For each image in each feature, checks to see if an image is at the median index and adds a boolean based on the check
+            for(var i = 0; i < this.features.length; i++) {
+                // Calculate the median index based on the length of the 'images' array
+                var medianIndex = Math.floor(this.features[i].images.length / 2);
+
+                // Set the value of isMedian in each image object
+                for(var j = 0; j < this.features[i].images.length; j++) {
+                    if(medianIndex === j) {
+                        this.features[i].images[j].isMedian = true;
+                    } else {
+                        this.features[i].images[j].isMedian = false;
+                    }
+                }
+            }
         }
+    },
+    created: function() {
+        this.addControlLockBool();
+        this.addImageZIndices();
+        this.calcMedianImageIndices();
     },
     template: '<div class="feature-grid">\
                     <feature\
