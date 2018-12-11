@@ -216,15 +216,11 @@ Vue.component('feature-grid', {
         slideImagesRight: function(index) {
             // If the controls are unlocked, proceed normally
             if(this.features[index].controlsAreLocked === false) {
-                console.log('Sliding images right...');
-
                 // Lock the overlay controls
                 this.lockControls(index);
 
                 // Set the z-index of the first element in the images array for a given feature to -1 to prevent transition overlaps.
                 this.features[index].images[0].zIndex = -1;
-
-                console.log('Set left-most image z-index to -1');
 
                 // Remove the first element in the images array for a given feature and add it to the end of the array.
                 this.features[index].images.push(this.features[index].images.shift());
@@ -232,7 +228,6 @@ Vue.component('feature-grid', {
                 // Reset all image z-indexes after the transition is complete.
                 setTimeout(function() {
                     this.resetAllZIndexes(index);
-                    console.log('All z indices reset.');
                     this.unlockControls(index);
                 }.bind(this), 400);
             }

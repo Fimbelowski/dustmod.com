@@ -1,4 +1,11 @@
 // Layout rules
+.l-header {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
 .l-about {
   display: flex;
   flex-direction: column;
