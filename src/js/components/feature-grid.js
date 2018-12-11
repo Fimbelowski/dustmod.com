@@ -6,15 +6,15 @@ Vue.component('feature-grid', {
                     caption: 'Online Multiplayer',
                     images: [
                         {
-                            path: 'https://i.imgur.com/LPYEarp.jpg',
+                            path: 'dist/images/feature-images/multiplayer-1.jpg',
                             subcaption: 'Four Player'
                         },
                         {
-                            path: 'https://i.imgur.com/xUWfM1d.jpg',
+                            path: 'dist/images/feature-images/multiplayer-2.jpg',
                             subcaption: 'Two Player'
                         },
                         {
-                            path: 'https://i.imgur.com/hvHh43e.jpg',
+                            path: 'dist/images/feature-images/multiplayer-3.jpg',
                             subcaption: 'Three Player'
                         }
                     ]
@@ -23,23 +23,23 @@ Vue.component('feature-grid', {
                     caption: 'Quality of Life',
                     images: [
                         {
-                            path: 'https://i.imgur.com/XU9k2qR.jpg',
+                            path: 'dist/images/feature-images/qol-1.jpg',
                             subcaption: 'Input Display'
                         },
                         {
-                            path: 'https://i.imgur.com/EU71x3f.jpg',
+                            path: 'dist/images/feature-images/qol-2.jpg',
                             subcaption: 'Replay Ghosts'
                         },
                         {
-                            path: 'https://i.imgur.com/w8DrmnM.jpg',
+                            path: 'dist/images/feature-images/qol-3.jpg',
                             subcaption: 'In-Game Configuration'
                         },
                         {
-                            path: 'https://i.imgur.com/HOFV6Z3.jpg',
+                            path: 'dist/images/feature-images/qol-4.jpg',
                             subcaption: 'Extended Virtual Tome'
                         },
                         {
-                            path: 'https://i.imgur.com/liKAR9z.jpg',
+                            path: 'dist/images/feature-images/qol-5.jpg',
                             subcaption: 'Game Save Recovery/Reset'
                         }
                     ]
@@ -48,23 +48,23 @@ Vue.component('feature-grid', {
                     caption: 'Community Nexus',
                     images: [
                         {
-                            path: 'https://i.imgur.com/gZILxzD.jpg',
+                            path: 'dist/images/feature-images/community-nexus-1.jpg',
                             subcaption: 'Single Screen Map Pack'
                         },
                         {
-                            path: 'https://i.imgur.com/oFrc4K4.jpg',
+                            path: 'dist/images/feature-images/community-nexus-2.jpg',
                             subcaption: 'Dustforce Arcade'
                         },
                         {
-                            path: 'https://i.imgur.com/mqMOfi8.jpg',
+                            path: 'dist/images/feature-images/community-nexus-3.jpg',
                             subcaption: 'Entrance'
                         },
                         {
-                            path: 'https://i.imgur.com/vhJ2r6y.jpg',
+                            path: 'dist/images/feature-images/community-nexus-4.jpg',
                             subcaption: 'Dark Forest Map Pack'
                         },
                         {
-                            path: 'https://i.imgur.com/YwmI08Z.jpg',
+                            path: 'dist/images/feature-images/community-nexus-5.jpg',
                             subcaption: 'CMR 54 Nexus'
                         }
                     ]
@@ -73,15 +73,15 @@ Vue.component('feature-grid', {
                     caption: 'Extended Leaderboards',
                     images: [
                         {
-                            path: 'https://i.imgur.com/GJPwHiZ.jpg',
+                            path: 'dist/images/feature-images/leaderboards-1.jpg',
                             subcaption: 'Lowjump Leaderboards'
                         },
                         {
-                            path: 'https://i.imgur.com/C5EdbzE.jpg',
+                            path: 'dist/images/feature-images/leaderboards-2.jpg',
                             subcaption: 'Character Filtering'
                         },
                         {
-                            path: 'https://i.imgur.com/R0ZzkD0.jpg',
+                            path: 'dist/images/feature-images/leaderboards-3.jpg',
                             subcaption: 'TAS Leaderboards'
                         }
                     ]
@@ -90,23 +90,23 @@ Vue.component('feature-grid', {
                     caption: 'Custom Level Scripting',
                     images: [
                         {
-                            path: 'https://i.imgur.com/Fx7NZhw.jpg',
+                            path: 'dist/images/feature-images/scripting-1.jpg',
                             subcaption: 'Multiple Characters'
                         },
                         {
-                            path: 'https://i.imgur.com/ZShcg93.jpg',
+                            path: 'dist/images/feature-images/scripting-2.jpg',
                             subcaption: 'Reactive Elements'
                         },
                         {
-                            path: 'https://i.imgur.com/530yqh9.jpg',
+                            path: 'dist/images/feature-images/scripting-3.jpg',
                             subcaption: 'Custom Visual Effects'
                         },
                         {
-                            path: 'https://i.imgur.com/30zU2du.jpg',
+                            path: 'dist/images/feature-images/scripting-4.jpg',
                             subcaption: 'Custom Characters/Movesets'
                         },
                         {
-                            path: 'https://i.imgur.com/KYkeUq5.jpg',
+                            path: 'dist/images/feature-images/scripting-5.jpg',
                             subcaption: 'Custom Visual Elements'
                         }
                     ]
@@ -115,23 +115,23 @@ Vue.component('feature-grid', {
                     caption: 'Daily Featured Custom Level',
                     images: [
                         {
-                            path: 'https://i.imgur.com/YJvQjoc.jpg',
+                            path: 'dist/images/feature-images/daily-1.jpg',
                             subcaption: 'Leaderboard'
                         },
                         {
-                            path: 'https://i.imgur.com/xIqxDS7.jpg',
+                            path: 'dist/images/feature-images/daily-2.jpg',
                             subcaption: 'History'
                         },
                         {
-                            path: 'https://i.imgur.com/iM57jo6.jpg',
+                            path: 'dist/images/feature-images/daily-3.jpg',
                             subcaption: 'Entrance'
                         },
                         {
-                            path: 'https://i.imgur.com/FYWqhho.jpg',
+                            path: 'dist/images/feature-images/daily-4.jpg',
                             subcaption: 'Featured Level on 12/06/2018'
                         },
                         {
-                            path: 'https://i.imgur.com/JVSBmFT.jpg',
+                            path: 'dist/images/feature-images/daily-5.jpg',
                             subcaption: 'Leaderboard Location'
                         }
                     ]
@@ -140,15 +140,15 @@ Vue.component('feature-grid', {
                     caption: 'TAS Tools',
                     images: [
                         {
-                            path: 'https://i.imgur.com/yA4ABcz.jpg',
+                            path: 'dist/images/feature-images/tas-tools-1.jpg',
                             subcaption: 'Frame Advance in Use'
                         },
                         {
-                            path: 'https://i.imgur.com/g1g6mQP.jpg',
+                            path: 'dist/images/feature-images/tas-tools-2.jpg',
                             subcaption: 'Frame Advance Menu'
                         },
                         {
-                            path: 'https://i.imgur.com/yA4ABcz.jpg',
+                            path: 'dist/images/feature-images/tas-tools-3.jpg',
                             subcaption: 'Debug Data'
                         }
                     ]
