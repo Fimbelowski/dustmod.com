@@ -26,7 +26,10 @@ gulp.task('sass:watch', function() {
 
 gulp.task('images', function() {
   gulp.src('src/images/**/*')
-  .pipe(imagemin())
+  .pipe(imagemin([
+    imagemin.jpegtran(),
+    imagemin.optipng()
+  ]))
   .pipe(gulp.dest('dist/images'));
 });
 
