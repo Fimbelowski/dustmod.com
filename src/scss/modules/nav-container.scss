@@ -1,5 +1,23 @@
+@import '../variables';
+
 .nav-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+    color: $gray-300;
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: white;
+    }
+}
+
+@mixin nav-container--phone() {
+    .nav-container {
+        display: none;
+    }
 }
