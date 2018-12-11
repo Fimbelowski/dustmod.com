@@ -5,10 +5,17 @@ Vue.component('feature-image', {
 
         }
     },
+    computed: {
+        styleObj: function() {
+            return {
+                'z-index': this.imageInfo.zIndex
+            }
+        }
+    },
     template: '<img v-if="imageInfo.isMedian || imageInfo.canLoad"\
                 class="feature-image"\
                 :src="imageInfo.path"\
                 :key="imageInfo.key"\
-                :style="{ zIndex: imageInfo.zIndex }"\
+                :style="styleObj"\
                 :alt="\'Dustmod \' + imageInfo.subcaption">'
 });

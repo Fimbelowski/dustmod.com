@@ -7,15 +7,18 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/multiplayer-1.jpg',
-                            subcaption: 'Four Player'
+                            subcaption: 'Four Player',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-2.jpg',
-                            subcaption: 'Two Player'
+                            subcaption: 'Two Player',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/multiplayer-3.jpg',
-                            subcaption: 'Three Player'
+                            subcaption: 'Three Player',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -24,23 +27,28 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/qol-1.jpg',
-                            subcaption: 'Input Display'
+                            subcaption: 'Input Display',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/qol-2.jpg',
-                            subcaption: 'Replay Ghosts'
+                            subcaption: 'Replay Ghosts',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/qol-3.jpg',
-                            subcaption: 'In-Game Configuration'
+                            subcaption: 'In-Game Configuration',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/qol-4.jpg',
-                            subcaption: 'Extended Virtual Tome'
+                            subcaption: 'Extended Virtual Tome',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/qol-5.jpg',
-                            subcaption: 'Game Save Recovery/Reset'
+                            subcaption: 'Game Save Recovery/Reset',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -49,23 +57,28 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/community-nexus-1.jpg',
-                            subcaption: 'Single Screen Map Pack'
+                            subcaption: 'Single Screen Map Pack',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-2.jpg',
-                            subcaption: 'Dustforce Arcade'
+                            subcaption: 'Dustforce Arcade',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-3.jpg',
-                            subcaption: 'Entrance'
+                            subcaption: 'Entrance',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-4.jpg',
-                            subcaption: 'Dark Forest Map Pack'
+                            subcaption: 'Dark Forest Map Pack',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/community-nexus-5.jpg',
-                            subcaption: 'CMR 54 Nexus'
+                            subcaption: 'CMR 54 Nexus',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -74,15 +87,18 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/leaderboards-1.jpg',
-                            subcaption: 'Lowjump Leaderboards'
+                            subcaption: 'Lowjump Leaderboards',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/leaderboards-2.jpg',
-                            subcaption: 'Character Filtering'
+                            subcaption: 'Character Filtering',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/leaderboards-3.jpg',
-                            subcaption: 'TAS Leaderboards'
+                            subcaption: 'TAS Leaderboards',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -91,23 +107,28 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/scripting-1.jpg',
-                            subcaption: 'Multiple Characters'
+                            subcaption: 'Multiple Characters',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-2.jpg',
-                            subcaption: 'Reactive Elements'
+                            subcaption: 'Reactive Elements',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-3.jpg',
-                            subcaption: 'Custom Visual Effects'
+                            subcaption: 'Custom Visual Effects',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-4.jpg',
-                            subcaption: 'Custom Characters/Movesets'
+                            subcaption: 'Custom Characters/Movesets',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/scripting-5.jpg',
-                            subcaption: 'Custom Visual Elements'
+                            subcaption: 'Custom Visual Elements',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -116,23 +137,28 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/daily-1.jpg',
-                            subcaption: 'Leaderboard'
+                            subcaption: 'Leaderboard',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-2.jpg',
-                            subcaption: 'History'
+                            subcaption: 'History',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-3.jpg',
-                            subcaption: 'Entrance'
+                            subcaption: 'Entrance',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-4.jpg',
-                            subcaption: 'Featured Level on 12/06/2018'
+                            subcaption: 'Featured Level on 12/06/2018',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/daily-5.jpg',
-                            subcaption: 'Leaderboard Location'
+                            subcaption: 'Leaderboard Location',
+                            zIndex: 0
                         }
                     ]
                 },
@@ -141,15 +167,18 @@ Vue.component('feature-grid', {
                     images: [
                         {
                             path: 'dist/images/feature-images/tas-tools-1.jpg',
-                            subcaption: 'Frame Advance in Use'
+                            subcaption: 'Frame Advance in Use',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/tas-tools-2.jpg',
-                            subcaption: 'Frame Advance Menu'
+                            subcaption: 'Frame Advance Menu',
+                            zIndex: 0
                         },
                         {
                             path: 'dist/images/feature-images/tas-tools-3.jpg',
-                            subcaption: 'Debug Data'
+                            subcaption: 'Debug Data',
+                            zIndex: 0
                         }
                     ]
                 }
@@ -187,11 +216,15 @@ Vue.component('feature-grid', {
         slideImagesRight: function(index) {
             // If the controls are unlocked, proceed normally
             if(this.features[index].controlsAreLocked === false) {
+                console.log('Sliding images right...');
+
                 // Lock the overlay controls
                 this.lockControls(index);
 
                 // Set the z-index of the first element in the images array for a given feature to -1 to prevent transition overlaps.
                 this.features[index].images[0].zIndex = -1;
+
+                console.log('Set left-most image z-index to -1');
 
                 // Remove the first element in the images array for a given feature and add it to the end of the array.
                 this.features[index].images.push(this.features[index].images.shift());
@@ -199,6 +232,7 @@ Vue.component('feature-grid', {
                 // Reset all image z-indexes after the transition is complete.
                 setTimeout(function() {
                     this.resetAllZIndexes(index);
+                    console.log('All z indices reset.');
                     this.unlockControls(index);
                 }.bind(this), 400);
             }
@@ -265,7 +299,6 @@ Vue.component('feature-grid', {
     created: function() {
         this.addFeatureIndices();
         this.addControlLockBool();
-        this.addImageZIndices();
         this.calcMedianImageIndices();
         this.addImageLoadBool();
     },
