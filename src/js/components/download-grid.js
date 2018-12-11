@@ -5,9 +5,7 @@ Vue.component('download-grid', {
         osChoices: [
             {
             os: 'Windows',
-            id: 'windows',
             iconPath: 'dist/images/windows-logo.png',
-            imgAlt: 'Windows logo',
             btnState: '',
             subsections: [
                 {
@@ -21,8 +19,7 @@ Vue.component('download-grid', {
                             text: 'DirectX 12 (DRM-Free)',
                             href: 'https://dustkid.com/getdustmod/win32_dx12_drmfree'
                         }
-                    ],
-                    key: 'winSub0'
+                    ]
                 },
                 {
                     note: 'The same as vanilla Dustforce',
@@ -35,8 +32,7 @@ Vue.component('download-grid', {
                             text: 'DirectX 9 (DRM-Free)',
                             href: 'https://dustkid.com/getdustmod/win32_drmfree'
                         }
-                    ],
-                    key: 'winSub1'
+                    ]
                 },
                 {
                     note: 'OpenGL Based',
@@ -49,8 +45,7 @@ Vue.component('download-grid', {
                             text: 'SDL2 (DRM-Free)',
                             href: 'https://dustkid.com/getdustmod/win32_sdl2_drmfree'
                         }
-                    ],
-                    key: 'winSub2'
+                    ]
                 }
             ],
             subsectionStyles: [
@@ -60,9 +55,7 @@ Vue.component('download-grid', {
             },
             {
             os: 'Mac OS X',
-            id: 'mac',
             iconPath: 'dist/images/apple-logo.png',
-            imgAlt: 'Apple logo',
             btnState: '',
             subsections: [
                 {
@@ -76,8 +69,7 @@ Vue.component('download-grid', {
                     text: '64-Bit (DRM-Free)',
                     href: 'https://dustkid.com/getdustmod/osx64_drmfree'
                     }
-                ],
-                key: 'macSub0'
+                ]
                 }
             ],
             subsectionStyles: [
@@ -87,9 +79,7 @@ Vue.component('download-grid', {
             },
             {
             os: 'Linux',
-            id: 'linux',
             iconPath: 'dist/images/linux-logo.png',
-            imgAlt: 'Linux logo',
             btnState: '',
             subsections: [
                 {
@@ -103,8 +93,7 @@ Vue.component('download-grid', {
                     text: '64-Bit (DRM-Free)',
                     href: 'https://dustkid.com/getdustmod/linux64_drmfree'
                     }
-                ],
-                key: 'linuxSub0'
+                ]
                 }
             ],
             subsectionStyles: [
@@ -116,6 +105,26 @@ Vue.component('download-grid', {
         }
     },
     methods: {
+        addOSIDProperty: function() {
+            // For each OS option, add an id property which is the OS name in all lowercase
+            for(var i = 0; i < this.osChoices.length; i++) {
+                this.osChoices[i].id = this.osChoices[i].os.replace(/\s+/g, '-').toLowerCase();
+            }
+        },
+        addOSImgAltProperty: function() {
+            // For each OS option, add an imgAlt property that is the OS name + ' Logo'
+            for(var i = 0; i < this.osChoices.length; i++) {
+                this.osChoices[i].imgAlt = this.osChoices[i].os + ' Logo';
+            }
+        },
+        addOSSubsectionKeyProperty: function() {
+            // For each subsection in each OS option, add a key property that is the OS ID and the number of the subsection
+            for(var i = 0; i < this.osChoices.length; i++) {
+                for(var j = 0; j < this.osChoices[i].subsections.length; j++) {
+                    this.osChoices[i].subsections[j].key = this.osChoices[i].id + (j + 1);
+                }
+            }
+        },
         onOSClicked: function(osID) {
             // When an os-clicked event is received, set the state of the os button that was clicked to 'is-focused'.
             // Set all other button states to 'is-semi-transparent'.
@@ -127,6 +136,11 @@ Vue.component('download-grid', {
                 }
             }
         }
+    },
+    created: function() {
+        this.addOSIDProperty();
+        this.addOSImgAltProperty();
+        this.addOSSubsectionKeyProperty();
     },
     template: "<div class='os-choice-grid' :class='styles'>\
                 <download-choice\
