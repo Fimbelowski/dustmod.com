@@ -67,6 +67,7 @@
             </button>
           </a>
           <p v-if='version'>Version {{ version }}</p>
+          <p v-else>Version number could not be retrieved.</p>
           <transition name='expand'>
             <h3 v-if='choicesAreShown'>Choose Your Operating System</h3>
           </transition>
