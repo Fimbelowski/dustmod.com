@@ -17,7 +17,7 @@ window.onload = function() {
         req.open('GET', 'http://dustkid.com/backend8/dustmod_version.php', true);
 
         req.onload = function() {
-          console.log(this.responseText);
+          vm.version = this.responseText;
         }
 
         req.send();
