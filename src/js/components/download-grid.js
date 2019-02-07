@@ -9,41 +9,65 @@ Vue.component('download-grid', {
             btnState: '',
             subsections: [
                 {
-                    note: 'Requires Win10 (Best Performance)',
+                    note: 'DirectX 12 (Best Performance (Requires Windows 10))',
                     links: [
                         {
-                            text: 'DirectX 12 (Steam)',
+                            text: 'Steam (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_dx12_steam'
                         },
                         {
-                            text: 'DirectX 12 (DRM-Free)',
+                            text: 'Steam (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_dx12_steam'
+                        },
+                        {
+                            text: 'DRM-Free (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_dx12_drmfree'
+                        },
+                        {
+                            text: 'DRM-Free (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_dx12_drmfree'
                         }
                     ]
                 },
                 {
-                    note: 'The same as vanilla Dustforce',
+                    note: 'DirectX 9 (The same as vanilla Dustforce)',
                     links: [
                         {
-                            text: 'DirectX 9 (Steam)',
+                            text: 'Steam (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_steam'
                         },
                         {
-                            text: 'DirectX 9 (DRM-Free)',
+                            text: 'Steam (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_steam'
+                        },
+                        {
+                            text: 'DRM-Free (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_drmfree'
+                        },
+                        {
+                            text: 'DRM-Free (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_drmfree'
                         }
                     ]
                 },
                 {
-                    note: 'OpenGL Based',
+                    note: 'SDL2 (OpenGL Based)',
                     links: [
                         {
-                            text: 'SDL2 (Steam)',
+                            text: 'Steam (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_sdl2_steam'
                         },
                         {
-                            text: 'SDL2 (DRM-Free)',
+                            text: 'Steam (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_sdl2_steam'
+                        },
+                        {
+                            text: 'DRM-Free (32-Bit)',
                             href: 'https://dustkid.com/getdustmod/win32_sdl2_drmfree'
+                        },
+                        {
+                            text: 'DRM-Free (64-Bit)',
+                            href: 'https://dustkid.com/getdustmod/win64_sdl2_drmfree'
                         }
                     ]
                 }
