@@ -6,17 +6,17 @@ Vue.component('feature-grid', {
                     caption: 'Online Multiplayer',
                     images: [
                         {
-                            path: 'dist/images/feature-images/multiplayer-1.jpg',
+                            path: 'images/feature-images/multiplayer-1.jpg',
                             subcaption: 'Four Player',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/multiplayer-2.jpg',
+                            path: 'images/feature-images/multiplayer-2.jpg',
                             subcaption: 'Two Player',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/multiplayer-3.jpg',
+                            path: 'images/feature-images/multiplayer-3.jpg',
                             subcaption: 'Three Player',
                             zIndex: 0
                         }
@@ -26,27 +26,27 @@ Vue.component('feature-grid', {
                     caption: 'Quality of Life',
                     images: [
                         {
-                            path: 'dist/images/feature-images/qol-1.jpg',
+                            path: 'images/feature-images/qol-1.jpg',
                             subcaption: 'Input Display',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/qol-2.jpg',
+                            path: 'images/feature-images/qol-2.jpg',
                             subcaption: 'Replay Ghosts',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/qol-3.jpg',
+                            path: 'images/feature-images/qol-3.jpg',
                             subcaption: 'In-Game Configuration',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/qol-4.jpg',
+                            path: 'images/feature-images/qol-4.jpg',
                             subcaption: 'Extended Virtual Tome',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/qol-5.jpg',
+                            path: 'images/feature-images/qol-5.jpg',
                             subcaption: 'Game Save Recovery/Reset',
                             zIndex: 0
                         }
@@ -56,27 +56,27 @@ Vue.component('feature-grid', {
                     caption: 'Community Nexus',
                     images: [
                         {
-                            path: 'dist/images/feature-images/community-nexus-1.jpg',
+                            path: 'images/feature-images/community-nexus-1.jpg',
                             subcaption: 'Single Screen Map Pack',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/community-nexus-2.jpg',
+                            path: 'images/feature-images/community-nexus-2.jpg',
                             subcaption: 'Dustforce Arcade',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/community-nexus-3.jpg',
+                            path: 'images/feature-images/community-nexus-3.jpg',
                             subcaption: 'Entrance',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/community-nexus-4.jpg',
+                            path: 'images/feature-images/community-nexus-4.jpg',
                             subcaption: 'Dark Forest Map Pack',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/community-nexus-5.jpg',
+                            path: 'images/feature-images/community-nexus-5.jpg',
                             subcaption: 'CMR 54 Nexus',
                             zIndex: 0
                         }
@@ -86,17 +86,17 @@ Vue.component('feature-grid', {
                     caption: 'Extended Leaderboards',
                     images: [
                         {
-                            path: 'dist/images/feature-images/leaderboards-1.jpg',
+                            path: 'images/feature-images/leaderboards-1.jpg',
                             subcaption: 'Lowjump Leaderboards',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/leaderboards-2.jpg',
+                            path: 'images/feature-images/leaderboards-2.jpg',
                             subcaption: 'Character Filtering',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/leaderboards-3.jpg',
+                            path: 'images/feature-images/leaderboards-3.jpg',
                             subcaption: 'TAS Leaderboards',
                             zIndex: 0
                         }
@@ -106,27 +106,27 @@ Vue.component('feature-grid', {
                     caption: 'Custom Level Scripting',
                     images: [
                         {
-                            path: 'dist/images/feature-images/scripting-1.jpg',
+                            path: 'images/feature-images/scripting-1.jpg',
                             subcaption: 'Multiple Characters',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/scripting-2.jpg',
+                            path: 'images/feature-images/scripting-2.jpg',
                             subcaption: 'Reactive Elements',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/scripting-3.jpg',
+                            path: 'images/feature-images/scripting-3.jpg',
                             subcaption: 'Custom Visual Effects',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/scripting-4.jpg',
+                            path: 'images/feature-images/scripting-4.jpg',
                             subcaption: 'Custom Characters/Movesets',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/scripting-5.jpg',
+                            path: 'images/feature-images/scripting-5.jpg',
                             subcaption: 'Custom Visual Elements',
                             zIndex: 0
                         }
@@ -136,27 +136,27 @@ Vue.component('feature-grid', {
                     caption: 'Daily Featured Custom Level',
                     images: [
                         {
-                            path: 'dist/images/feature-images/daily-1.jpg',
+                            path: 'images/feature-images/daily-1.jpg',
                             subcaption: 'Leaderboard',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/daily-2.jpg',
+                            path: 'images/feature-images/daily-2.jpg',
                             subcaption: 'History',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/daily-3.jpg',
+                            path: 'images/feature-images/daily-3.jpg',
                             subcaption: 'Entrance',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/daily-4.jpg',
+                            path: 'images/feature-images/daily-4.jpg',
                             subcaption: 'Featured Level on 12/06/2018',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/daily-5.jpg',
+                            path: 'images/feature-images/daily-5.jpg',
                             subcaption: 'Leaderboard Location',
                             zIndex: 0
                         }
@@ -166,17 +166,17 @@ Vue.component('feature-grid', {
                     caption: 'TAS Tools',
                     images: [
                         {
-                            path: 'dist/images/feature-images/tas-tools-1.jpg',
+                            path: 'images/feature-images/tas-tools-1.jpg',
                             subcaption: 'Frame Advance in Use',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/tas-tools-2.jpg',
+                            path: 'images/feature-images/tas-tools-2.jpg',
                             subcaption: 'Frame Advance Menu',
                             zIndex: 0
                         },
                         {
-                            path: 'dist/images/feature-images/tas-tools-3.jpg',
+                            path: 'images/feature-images/tas-tools-3.jpg',
                             subcaption: 'Debug Data',
                             zIndex: 0
                         }

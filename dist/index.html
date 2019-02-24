@@ -7,15 +7,15 @@
     <meta name='author' content='Christopher Fimbel'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' href='dist/css/styles.css'>
-    <link rel='icon' type='image/png' href='dist/images/apple-sprite.png'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed' rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='css/styles.css'>
+    <link rel='icon' type='image/png' href='images/apple-sprite.png'>
 
-    <script src='dist/js/vue.js'></script>
-    <script src='dist/js/main.js'></script>
+    <script src='js/vue.js'></script>
+    <script src='js/main.js'></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116536708-3"></script>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-116536708-3'></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -63,7 +63,7 @@
           <a href='#download' class='scroll-link no-decoration'>
             <button type='button' class='btn-main' @click='choicesAreShown = true' :disabled='choicesAreShown'>
               <p class='btn-main-text'>Download Dustmod</p>
-              <img src='dist/images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
+              <img src='images/download-icon.png' class='btn-icon download-icon' alt='download icon'>
             </button>
           </a>
           <p v-if='version'>Version {{ version }}</p>
@@ -93,7 +93,7 @@
           <a href='https://discord.gg/4F9WQeV' class='no-decoration' rel='external' target='_blank'>
             <button type='button' class='btn-main'>
               <p class='btn-main-text'>Dustforce Discord Server</p>
-              <img src='dist/images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
+              <img src='images/Discord-Logo-White.png' class='btn-icon discord-icon' alt='Discord logo'>
             </button>
           </a>
         </div>

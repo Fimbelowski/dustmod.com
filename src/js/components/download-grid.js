@@ -5,7 +5,7 @@ Vue.component('download-grid', {
         osChoices: [
             {
             os: 'Windows',
-            iconPath: 'dist/images/windows-logo.png',
+            iconPath: 'images/windows-logo.png',
             btnState: '',
             subsections: [
                 {
@@ -79,7 +79,7 @@ Vue.component('download-grid', {
             },
             {
             os: 'Mac OS X',
-            iconPath: 'dist/images/apple-logo.png',
+            iconPath: 'images/apple-logo.png',
             btnState: '',
             subsections: [
                 {
@@ -103,7 +103,7 @@ Vue.component('download-grid', {
             },
             {
             os: 'Linux',
-            iconPath: 'dist/images/linux-logo.png',
+            iconPath: 'images/linux-logo.png',
             btnState: '',
             subsections: [
                 {
