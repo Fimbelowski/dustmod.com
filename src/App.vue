@@ -3,7 +3,7 @@
     <v-main>
       <AppBar />
       <HeroImageSlider
-        :images="heroImages"
+        :images="config.HERO_IMAGES"
       />
     </v-main>
   </v-app>
@@ -12,6 +12,7 @@
 <script>
 import AppBar from './components/AppBar.vue';
 import HeroImageSlider from './components/HeroImageSlider.vue';
+import images from './assets/hero_images/index';
 
 export default {
   name: 'App',
@@ -23,12 +24,9 @@ export default {
 
   data() {
     return {
-      heroImages: [
-        {
-          caption: 'infinidifficult',
-          src: 'infini.png',
-        },
-      ],
+      config: {
+        HERO_IMAGES: images,
+      },
     };
   },
 };
