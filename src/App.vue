@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <AppBar/>
+      <AppBar />
       <HeroImageSlider
         :images="heroImages"
       />
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import AppBar from './components/AppBar';
-import HeroImageSlider from './components/HeroImageSlider';
+import AppBar from './components/AppBar.vue';
+import HeroImageSlider from './components/HeroImageSlider.vue';
 
 export default {
   name: 'App',

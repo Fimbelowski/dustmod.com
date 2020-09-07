@@ -4,8 +4,8 @@
   >
     <v-row>
       <v-col
-        :key="image.src"
         v-for="image in images"
+        :key="image.src"
       >
         <v-img
           src="../assets/hero_images/infini.png"
