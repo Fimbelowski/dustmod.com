@@ -6,11 +6,13 @@
         :images="config.HERO_IMAGES"
         :max-height="heroImageMaxHeight"
       />
+      <AboutSection />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import AboutSection from './components/AboutSection.vue';
 import AppBar from './components/AppBar.vue';
 import HeroImageSlider from './components/HeroImageSlider.vue';
 import images from './assets/hero_images/index';
@@ -19,6 +21,7 @@ export default {
   name: 'App',
 
   components: {
+    AboutSection,
     AppBar,
     HeroImageSlider,
   },

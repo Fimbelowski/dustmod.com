@@ -1,35 +1,38 @@
 <template>
-  <v-container
+  <section
     id="hero-image-slider"
-    class="ma-0 pa-0"
-    fluid
   >
-    <v-window
-      continuous
-      show-arrows
+    <v-container
+      class="ma-0 pa-0"
+      fluid
     >
-      <v-window-item
-        v-for="image in images"
-        :key="image.name"
-        style="position: relative;"
+      <v-window
+        continuous
+        show-arrows
       >
-        <v-img
-          :max-height="maxHeight"
-          :src="getImageUrlWithContext(image)"
-        />
-        <v-row
-          align-content="center window-item-overlay"
+        <v-window-item
+          v-for="image in images"
+          :key="image.name"
+          style="position: relative;"
         >
-          <v-col
-            class="text-subtitle-2 text-center"
-            style="font-size: 2rem !important;"
+          <v-img
+            :max-height="maxHeight"
+            :src="getImageUrlWithContext(image)"
+          />
+          <v-row
+            align-content="center window-item-overlay"
           >
-            {{ image.caption }}
-          </v-col>
-        </v-row>
-      </v-window-item>
-    </v-window>
-  </v-container>
+            <v-col
+              class="text-subtitle-2 text-center"
+              style="font-size: 2rem !important;"
+            >
+              {{ image.caption }}
+            </v-col>
+          </v-row>
+        </v-window-item>
+      </v-window>
+    </v-container>
+  </section>
 </template>
 
 <script>
