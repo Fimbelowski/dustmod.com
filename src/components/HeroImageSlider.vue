@@ -4,17 +4,31 @@
     class="ma-0 pa-0"
     fluid
   >
-    <v-row>
-      <v-col
+    <v-window
+      continuous
+      show-arrows
+    >
+      <v-window-item
         v-for="image in images"
         :key="image.name"
-        class="pa-0"
+        style="position: relative;"
       >
         <v-img
+          :max-height="maxHeight"
           :src="getImageUrlWithContext(image)"
         />
-      </v-col>
-    </v-row>
+        <v-row
+          align-content="center window-item-overlay"
+        >
+          <v-col
+            class="text-subtitle-2 text-center"
+            style="font-size: 2rem !important;"
+          >
+            {{ image.caption }}
+          </v-col>
+        </v-row>
+      </v-window-item>
+    </v-window>
   </v-container>
 </template>
 
@@ -27,6 +41,10 @@ export default {
       required: true,
       type: Array,
     },
+    maxHeight: {
+      default: undefined,
+      type: [Number, String],
+    },
   },
 
   methods: {
@@ -38,3 +56,18 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+#hero-image-slider {
+
+  .window-item-overlay {
+    position: absolute;
+    bottom: 0;
+
+    height: 150px;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, .65);
+  }
+}
+</style>

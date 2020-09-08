@@ -4,6 +4,7 @@
       <AppBar />
       <HeroImageSlider
         :images="config.HERO_IMAGES"
+        :max-height="heroImageMaxHeight"
       />
     </v-main>
   </v-app>
@@ -28,6 +29,13 @@ export default {
         HERO_IMAGES: images,
       },
     };
+  },
+
+  computed: {
+    /** @type {number} */
+    heroImageMaxHeight() {
+      return this.$vuetify.breakpoint.lgAndUp ? window.innerHeight - 64 : undefined;
+    },
   },
 };
 </script>
