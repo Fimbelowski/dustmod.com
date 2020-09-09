@@ -21,6 +21,7 @@
           />
           <v-row
             align-content="center window-item-overlay"
+            class="ma-0"
           >
             <v-col
               class="text-subtitle-2 text-center"
