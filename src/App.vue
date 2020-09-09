@@ -1,7 +1,16 @@
 <template>
   <v-app>
     <v-main>
-      <AppBar />
+      <v-app-bar>
+        <v-img
+          class="mr-4"
+          max-width="40"
+          src="./assets/apple.png"
+        />
+        <h1>
+          DUSTMOD
+        </h1>
+      </v-app-bar>
       <HeroImageSlider
         :images="config.HERO_IMAGES"
         :max-height="heroImageMaxHeight"
@@ -13,7 +22,6 @@
 
 <script>
 import AboutSection from './components/AboutSection.vue';
-import AppBar from './components/AppBar.vue';
 import HeroImageSlider from './components/HeroImageSlider.vue';
 import images from './assets/hero_images/index';
 
@@ -22,7 +30,6 @@ export default {
 
   components: {
     AboutSection,
-    AppBar,
     HeroImageSlider,
   },
 
@@ -44,8 +51,17 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: 'Caracteres';
-  src: url('./assets/Caracteres L1.ttf') format('truetype');
+#app {
+  @font-face {
+    font-family: 'Caracteres';
+    src: url('/src/assets/Caracteres L1.ttf') format('truetype');
+  }
+
+  .v-app-bar {
+    h1 {
+      font-family: Caracteres, sans-serif;
+      letter-spacing: 1px;
+    }
+  }
 }
 </style>
