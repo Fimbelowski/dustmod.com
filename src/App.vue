@@ -15,46 +15,37 @@
         :images="config.HERO_IMAGES"
         :max-height="heroImageMaxHeight"
       />
-      <v-container
+      <section
         id="about-section"
-        class="py-8"
-        tag="section"
+        class="mx-auto py-8"
       >
-        <v-row
-          justify="center"
+        <h2
+          class="mb-8 text-center text-h2"
         >
-          <v-col
-            cols="8"
-          >
-            <h2
-              class="mb-8 text-center text-h2"
+          What is Dustmod?
+        </h2>
+        <v-card>
+          <v-card-text>
+            <blockquote
+              class="body-1"
             >
-              What is Dustmod?
-            </h2>
-            <v-card>
-              <v-card-text>
-                <blockquote
-                  class="body-1"
-                >
-                  {{ aboutText }}
-                </blockquote>
-                <div
-                  class="text-body-1 text-right"
-                >
-                  -msg555, Creator of Dustmod and
-                  <a
-                    href="http://dustkid.com/"
-                    rel="noopener"
-                    target="_blank"
-                  >
-                    dustkid.com
-                  </a>
-                </div>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
+              {{ aboutText }}
+            </blockquote>
+            <div
+              class="text-body-1 text-right"
+            >
+              -msg555, Creator of Dustmod and
+              <a
+                href="http://dustkid.com/"
+                rel="noopener"
+                target="_blank"
+              >
+                dustkid.com
+              </a>
+            </div>
+          </v-card-text>
+        </v-card>
+      </section>
     </v-main>
   </v-app>
 </template>
@@ -90,6 +81,11 @@ export default {
 
 <style lang="scss">
 #app {
+
+  #about-section {
+    max-width: 900px;
+  }
+
   .v-app-bar {
     h1 {
       font-family: Caracteres, sans-serif;
