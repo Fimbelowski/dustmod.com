@@ -72,7 +72,7 @@ export default {
 
   data() {
     return {
-      aboutText: ' Dustmod is a hobby project that came as a natural extension to dustkid.com, a website that I operate that collects all sorts of Dustforce related statistics. While integrating dustkid.com curated leaderboards into Dustmod and extending the replay system to give richer metadata was an initial goal, the project has expanded to include quite a variety of extended functionality on top of the base game. It\'s my hope that Dustmod continues to be a way to launch deep into the nearly unlimited content that Dustforce and the surrounding community offers.',
+      aboutText: 'Dustmod is a hobby project that came as a natural extension to dustkid.com, a website that I operate that collects all sorts of Dustforce related statistics. While integrating dustkid.com curated leaderboards into Dustmod and extending the replay system to give richer metadata was an initial goal, the project has expanded to include quite a variety of extended functionality on top of the base game. It\'s my hope that Dustmod continues to be a way to launch deep into the nearly unlimited content that Dustforce and the surrounding community offers.',
       config: {
         HERO_IMAGES: images,
       },
@@ -90,11 +90,6 @@ export default {
 
 <style lang="scss">
 #app {
-  @font-face {
-    font-family: 'Caracteres';
-    src: url('/src/assets/Caracteres L1.ttf') format('truetype');
-  }
-
   .v-app-bar {
     h1 {
       font-family: Caracteres, sans-serif;
