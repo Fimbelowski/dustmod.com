@@ -46,11 +46,32 @@
           </v-card-text>
         </v-card>
       </section>
+      <v-container
+        id="download-section"
+        class="mx-auto py-8"
+        tag="section"
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <DownloadButtonFlavorImage
+            class="mr-10"
+          />
+          <v-btn
+            color="#9b59c8"
+            x-large
+          >
+            Download
+          </v-btn>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import DownloadButtonFlavorImage from './components/DownloadButtonFlavorImage.vue';
 import HeroImageSlider from './components/HeroImageSlider.vue';
 import images from './assets/hero_images/index';
 
@@ -58,6 +79,7 @@ export default {
   name: 'App',
 
   components: {
+    DownloadButtonFlavorImage,
     HeroImageSlider,
   },
 
