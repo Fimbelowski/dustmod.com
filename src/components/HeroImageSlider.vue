@@ -52,7 +52,7 @@ export default {
   },
 
   methods: {
-    /** @return {object} */
+    /** @return {string} */
     getImageUrlWithContext(image) {
       const images = require.context('../assets/hero_images/', false, /\.png$/);
       return images(`./${image.name}.png`);
