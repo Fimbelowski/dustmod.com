@@ -15,10 +15,7 @@
         :images="config.HERO_IMAGES"
         :max-height="heroImageMaxHeight"
       />
-      <section
-        id="about-section"
-        class="mx-auto py-8"
-      >
+      <PageSection>
         <h2
           class="mb-8 text-center text-h2"
         >
@@ -45,12 +42,8 @@
             </div>
           </v-card-text>
         </v-card>
-      </section>
-      <v-container
-        id="download-section"
-        class="mx-auto py-8"
-        tag="section"
-      >
+      </PageSection>
+      <PageSection>
         <v-row
           align="center"
           justify="center"
@@ -69,7 +62,7 @@
         <DownloadDialog
           :display.sync="dialogs.download.display"
         />
-      </v-container>
+      </PageSection>
     </v-main>
   </v-app>
 </template>
@@ -79,6 +72,7 @@ import DownloadButtonFlavorImage from './components/DownloadButtonFlavorImage.vu
 import DownloadDialog from './components/DownloadDialog.vue';
 import HeroImageSlider from './components/HeroImageSlider.vue';
 import images from './assets/hero_images/index';
+import PageSection from './components/PageSection.vue';
 
 export default {
   name: 'App',
@@ -87,6 +81,7 @@ export default {
     DownloadButtonFlavorImage,
     DownloadDialog,
     HeroImageSlider,
+    PageSection,
   },
 
   data() {
@@ -114,10 +109,6 @@ export default {
 
 <style lang="scss">
 #app {
-
-  #about-section {
-    max-width: 900px;
-  }
 
   .v-app-bar {
     h1 {
