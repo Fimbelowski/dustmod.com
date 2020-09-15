@@ -13,11 +13,11 @@
           v-model="os"
           :items="osOptions"
           label="Operating System"
-          @change="handleOsChange()"
+          @change="handleOsChange($event)"
         />
         <v-select
           v-model="graphics"
-          :disabled="os !== 'windows'"
+          :disabled="os !== 'win'"
           :items="graphicsOptions"
           label="Graphics API (Windows Only)"
         />
@@ -46,7 +46,8 @@
         </v-btn>
         <v-btn
           color="#9b59c8"
-          :disabled="os === null"
+          :disabled="downloadButtonDisabled"
+          :href="downloadHref"
           text
         >
           Download
@@ -73,22 +74,22 @@ export default {
       architectureOptions: [
         {
           text: '32-Bit',
-          value: '32bit',
+          value: '32',
         },
         {
           text: '64-Bit',
-          value: '64bit',
+          value: '64',
         },
       ],
       graphics: null,
       graphicsOptions: [
         {
           text: 'DirectX 12',
-          value: 'directX12',
+          value: 'dx12',
         },
         {
           text: 'DirectX 9',
-          value: 'directX9',
+          value: '',
         },
         {
           text: 'SDL2',
@@ -99,15 +100,15 @@ export default {
       osOptions: [
         {
           text: 'Windows',
-          value: 'windows',
+          value: 'win',
         },
         {
           text: 'Mac OS X',
-          value: 'mac',
+          value: 'osx',
         },
         {
           text: 'Linux',
-          value: 'linx',
+          value: 'linux',
         },
       ],
       platform: null,
@@ -118,7 +119,7 @@ export default {
         },
         {
           text: 'DRM Free',
-          value: 'drmFree',
+          value: 'drmfree',
         },
       ],
     };
@@ -127,18 +128,14 @@ export default {
   computed: {
     /** @type {string} */
     architectureHint() {
-      return this.os === 'windows'
-        ? 'This should match the architecture of your Steam installation, NOT your OS.'
+      return this.platform === 'steam'
+        ? 'This should match the architecture of your Steam installation (typically 32-Bit), NOT your OS.'
         : null;
     },
 
     /** @type {boolean} */
     architectureSelectDisabled() {
-      if (this.os === null) {
-        return true;
-      }
-
-      if (this.os === 'windows' && this.graphics === null) {
+      if (this.os !== 'win') {
         return true;
       }
 
@@ -156,19 +153,37 @@ export default {
     },
 
     /** @type {boolean} */
+    downloadButtonDisabled() {
+      return this.os === null
+        || (this.os === 'win' && this.graphics === null)
+        || this.platform === null
+        || this.architecture === null;
+    },
+
+    /** @type {string} */
+    downloadHref() {
+      const graphics = [null, ''].includes(this.graphics) ? '' : `_${this.graphics}`;
+
+      return `https://dustkid.com/getdustmod/${this.os}${this.architecture}${graphics}_${this.platform}`;
+    },
+
+    /** @type {boolean} */
     platformSelectDisabled() {
       if (this.os === null) {
         return true;
       }
 
-      return this.os === 'windows' ? this.graphics === null : false;
+      return this.os === 'win' ? this.graphics === null : false;
     },
   },
 
   methods: {
     /** @return {void} */
-    handleOsChange() {
+    handleOsChange(event) {
+      this.architecture = ['linux', 'osx'].includes(event) ? '64' : null;
+
       this.graphics = null;
+      this.platform = null;
     },
   },
 };
