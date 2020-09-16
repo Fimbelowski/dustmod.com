@@ -24,7 +24,7 @@
         <v-card>
           <v-card-text>
             <blockquote
-              class="body-1"
+              class="text-body-1"
             >
               {{ aboutText }}
             </blockquote>
@@ -62,6 +62,45 @@
         <DownloadDialog
           :display.sync="dialogs.download.display"
         />
+      </PageSection>
+      <PageSection>
+        <h2
+          class="mb-8 text-center text-h2"
+        >
+          Installation
+        </h2>
+        <v-card>
+          <v-card-text
+            class="text-body-1"
+          >
+            <ol
+              class="mb-4"
+            >
+              <li>
+                Download the version of Dustmod suitable for your installation of Dustforce
+              </li>
+              <li>
+                Unpack the contained files into the directory where Dustforce is already installed
+              </li>
+            </ol>
+            <h5
+              class="mb-4 text-center text-h5"
+            >
+              Adding Dustmod to Steam
+            </h5>
+            <ol>
+              <li>
+                In Steam, navigate to
+                <kbd>Games -> Add a Non-Steam Game to My Library</kbd>
+              </li>
+              <li>
+                Find the Dustmod executable (typically at <kbd>
+                  C:\Program Files (x86)\Steam\steamapps\common\Dustforce\dustmod.exe
+                </kbd>)
+              </li>
+            </ol>
+          </v-card-text>
+        </v-card>
       </PageSection>
     </v-main>
   </v-app>
