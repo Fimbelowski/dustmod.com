@@ -15,12 +15,9 @@
         :images="config.HERO_IMAGES"
         :max-height="heroImageMaxHeight"
       />
-      <PageSection>
-        <h2
-          class="mb-8 text-center text-h2"
-        >
-          What is Dustmod?
-        </h2>
+      <PageSection
+        title="What is Dustmod?"
+      >
         <v-card>
           <v-card-text>
             <blockquote
@@ -63,12 +60,9 @@
           :display.sync="dialogs.download.display"
         />
       </PageSection>
-      <PageSection>
-        <h2
-          class="mb-8 text-center text-h2"
-        >
-          Installation
-        </h2>
+      <PageSection
+        title="Installation"
+      >
         <v-card>
           <v-card-text
             class="text-body-1"
