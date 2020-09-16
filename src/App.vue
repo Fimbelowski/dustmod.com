@@ -129,6 +129,13 @@
           </v-card-text>
         </v-card>
       </PageSection>
+      <v-footer>
+        <v-row
+          justify="center"
+        >
+          &copy; Christopher Fimbel {{ new Date().getFullYear() }}
+        </v-row>
+      </v-footer>
     </v-main>
   </v-app>
 </template>
