@@ -11,12 +11,15 @@
         show-arrows
       >
         <v-window-item
-          v-for="image in images"
+          v-for="image in orderedImages"
           :key="image.name"
+          eager
           style="position: relative;"
         >
           <v-img
+            eager
             :max-height="maxHeight"
+            :position="image.position"
             :src="getImageUrlWithContext(image)"
           />
           <v-row
@@ -51,6 +54,15 @@ export default {
     },
   },
 
+  computed: {
+    /** @type {array} */
+    orderedImages() {
+      const images = [...this.images];
+
+      return images.sort((a, b) => a.order - b.order);
+    },
+  },
+
   methods: {
     /** @return {string} */
     getImageUrlWithContext(image) {
@@ -68,7 +80,7 @@ export default {
     position: absolute;
     bottom: 0;
 
-    height: 150px;
+    height: 100px;
     width: 100%;
 
     background-color: rgba(0, 0, 0, .65);
