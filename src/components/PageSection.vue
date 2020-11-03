@@ -7,7 +7,8 @@
       justify="center"
     >
       <v-col
-        cols="6"
+        md="6"
+        sm="10"
       >
         <h2
           v-if="title !== ''"
@@ -33,3 +34,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.page-section {
+
+  .text-h2 {
+    @media(max-width: 600px) {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+</style>

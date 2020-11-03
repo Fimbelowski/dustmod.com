@@ -28,7 +28,7 @@
           >
             <v-col
               class="text-subtitle-2 text-center"
-              style="font-size: 2rem !important;"
+              style="font-size: inherit !important;"
             >
               {{ image.caption }}
             </v-col>
@@ -77,13 +77,17 @@ export default {
 #hero-image-slider {
 
   .window-item-overlay {
-    position: absolute;
+    background-color: rgba(0, 0, 0, .65);
     bottom: 0;
-
+    font-size: 2rem;
     height: 100px;
+    position: absolute;
     width: 100%;
 
-    background-color: rgba(0, 0, 0, .65);
+    @media(max-width: 600px) {
+      font-size: 1rem;
+      height: 50px;
+    }
   }
 }
 </style>

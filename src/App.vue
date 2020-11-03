@@ -31,7 +31,7 @@
               -msg555, Creator of Dustmod and
               <a
                 href="http://dustkid.com/"
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 dustkid.com
@@ -114,9 +114,10 @@
               <v-btn
                 color="#9b59c8"
                 href="https://discord.gg/4F9WQeV"
+                max-width="100%"
                 rel="noopener"
                 target="_blank"
-                x-large
+                :x-large="$vuetify.breakpoint.smAndUp"
               >
                 <v-icon
                   class="mr-4"
