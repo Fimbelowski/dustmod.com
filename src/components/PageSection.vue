@@ -7,7 +7,8 @@
       justify="center"
     >
       <v-col
-        md="6"
+        lg="6"
+        md="8"
         sm="10"
       >
         <h2
