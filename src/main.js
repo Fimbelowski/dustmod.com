@@ -1,10 +1,10 @@
-import App from './App.svelte';
+import Vue from 'vue';
+import App from './App.vue';
+import vuetify from './plugins/vuetify';
 
-const app = new App({
-  target: document.body,
-  props: {
-    name: 'world',
-  },
-});
+Vue.config.productionTip = false;
 
-export default app;
+new Vue({
+  vuetify,
+  render: (h) => h(App),
+}).$mount('#app');
