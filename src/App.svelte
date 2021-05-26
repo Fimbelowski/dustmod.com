@@ -1,3 +1,7 @@
+<script>
+  import Card from './components/Card.svelte';
+</script>
+
 <main>
   <header>
     <div
@@ -10,12 +14,34 @@
       </h1>
     </div>
   </header>
+  <section>
+    <div
+      class="page-width"
+    >
+      <Card/>
+    </div>
+  </section>
 </main>
 
 <style>
   @font-face {
     font-family: 'Caracteres';
     src: url('/assets/fonts/Caracteres L1.ttf');
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('/assets/fonts/Proxima Nova.otf');
+  }
+
+  @media (max-width: 959px) {
+    .header__inner-container {
+      justify-content: center;
+    }
+
+    .page-width {
+      padding: 0 12px;
+    }
   }
 
   header {
@@ -48,6 +74,10 @@
 
   .page-width {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
+  }
+
+  section {
+    padding: 12px 0;
   }
 </style>
