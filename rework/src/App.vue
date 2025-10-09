@@ -6,6 +6,33 @@
         <h1 class="heading">DUSTMOD</h1>
       </v-app-bar>
       <HeroImageSlider :images="images" :max-height="heroImageMaxHeight" />
+      <PageSection title="What is Dustmod?">
+        <v-card>
+          <v-card-text>
+            <blockquote class="text-body-1">
+              Dustmod is a hobby project that came as a natural extension to
+              dustkid.com, a website that I operate that collects all sorts of
+              Dustforce related statistics. While integrating dustkid.com
+              curated leaderboards into Dustmod and extending the replay system
+              to give richer metadata was an initial goal, the project has
+              expanded to include quite a variety of extended functionality on
+              top of the base game. It's my hope that Dustmod continues to be a
+              way to launch deep into the nearly unlimited content that
+              Dustforce and the surrounding community offers.
+            </blockquote>
+            <div class="text-body-1 text-right">
+              -msg555, Creator of Dustmod and
+              <a
+                href="http://dustkid.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                dustkid.com
+              </a>
+            </div>
+          </v-card-text>
+        </v-card>
+      </PageSection>
     </v-main>
   </v-app>
 </template>
@@ -15,6 +42,7 @@ import { computed, type ComputedRef, useTemplateRef } from "vue";
 import { useDisplay } from "vuetify";
 
 import { images } from "./assets/hero_images/index";
+import PageSection from "./components/PageSection.vue";
 
 const headerRef = useTemplateRef("header");
 
