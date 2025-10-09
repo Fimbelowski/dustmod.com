@@ -9,5 +9,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HeroImageSlider: typeof import('./src/components/HeroImageSlider.vue')['default']
+    PageSection: typeof import('./src/components/PageSection.vue')['default']
   }
 }
