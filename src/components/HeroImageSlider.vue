@@ -1,15 +1,7 @@
 <template>
-  <section
-    id="hero-image-slider"
-  >
-    <v-container
-      class="ma-0 pa-0"
-      fluid
-    >
-      <v-window
-        continuous
-        show-arrows
-      >
+  <section id="hero-image-slider">
+    <v-container class="ma-0 pa-0" fluid>
+      <v-window continuous show-arrows>
         <v-window-item
           v-for="image in orderedImages"
           :key="image.name"
@@ -22,10 +14,7 @@
             :position="image.position"
             :src="getImageUrlWithContext(image)"
           />
-          <v-row
-            align-content="center window-item-overlay"
-            class="ma-0"
-          >
+          <v-row align-content="center window-item-overlay" class="ma-0">
             <v-col
               class="text-subtitle-2 text-center"
               style="font-size: inherit !important;"
@@ -41,7 +30,7 @@
 
 <script>
 export default {
-  name: 'HeroImageSlider',
+  name: "HeroImageSlider",
 
   props: {
     images: {
@@ -66,7 +55,7 @@ export default {
   methods: {
     /** @return {string} */
     getImageUrlWithContext(image) {
-      const images = require.context('../assets/hero_images/', false, /\.png$/);
+      const images = require.context("../assets/hero_images/", false, /\.png$/);
       return images(`./${image.name}.png`);
     },
   },
@@ -75,16 +64,15 @@ export default {
 
 <style lang="scss">
 #hero-image-slider {
-
   .window-item-overlay {
-    background-color: rgba(0, 0, 0, .65);
+    background-color: rgba(0, 0, 0, 0.65);
     bottom: 0;
     font-size: 2rem;
     height: 100px;
     position: absolute;
     width: 100%;
 
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       font-size: 1rem;
       height: 50px;
     }
