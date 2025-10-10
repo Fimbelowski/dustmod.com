@@ -33,6 +33,13 @@
           </v-card-text>
         </v-card>
       </PageSection>
+      <PageSection>
+        <v-row align="center" justify="center">
+          <DownloadButtonFlavorImage class="mr-10" />
+          <v-btn color="#9b59c8" size="x-large"> Download</v-btn>
+        </v-row>
+        <!-- <DownloadDialog :display.sync="dialogs.download.display" /> -->
+      </PageSection>
     </v-main>
   </v-app>
 </template>
