@@ -1,24 +1,11 @@
 <template>
-  <img
-    class="download-button-flavor-image"
-    :src="getRandomSpriteWithContext()"
-  >
+  <img class="download-button-flavor-image" :src="getRandomSprite()" />
 </template>
 
-<script>
-import SPRITES from '../assets/sprites/index';
+<script setup lang="ts">
+import SPRITES from "@/assets/sprites";
 
-export default {
-  name: 'DownloadButtonFlavorImage',
-
-  methods: {
-    /** @return {string} */
-    getRandomSpriteWithContext() {
-      const randomSprite = SPRITES[Math.floor(Math.random() * SPRITES.length)];
-
-      const images = require.context('../assets/sprites/', false, /\.png$/);
-      return images(`./${randomSprite}.png`);
-    },
-  },
-};
+function getRandomSprite() {
+  return SPRITES[Math.floor(Math.random() * SPRITES.length)];
+}
 </script>

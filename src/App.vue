@@ -1,21 +1,24 @@
 <template>
   <v-app>
     <v-main>
-      <v-app-bar>
+      <v-app-bar class="px-4 py-1" ref="header">
         <v-img class="mr-4" max-width="40" src="./assets/apple.png" />
-        <h1>
-          DUSTMOD
-        </h1>
+        <h1 class="heading">DUSTMOD</h1>
       </v-app-bar>
-      <HeroImageSlider
-        :images="config.HERO_IMAGES"
-        :max-height="heroImageMaxHeight"
-      />
+      <HeroImageSlider :images="images" :max-height="heroImageMaxHeight" />
       <PageSection title="What is Dustmod?">
         <v-card>
           <v-card-text>
             <blockquote class="text-body-1">
-              {{ aboutText }}
+              Dustmod is a hobby project that came as a natural extension to
+              dustkid.com, a website that I operate that collects all sorts of
+              Dustforce related statistics. While integrating dustkid.com
+              curated leaderboards into Dustmod and extending the replay system
+              to give richer metadata was an initial goal, the project has
+              expanded to include quite a variety of extended functionality on
+              top of the base game. It's my hope that Dustmod continues to be a
+              way to launch deep into the nearly unlimited content that
+              Dustforce and the surrounding community offers.
             </blockquote>
             <div class="text-body-1 text-right">
               -msg555, Creator of Dustmod and
@@ -33,20 +36,13 @@
       <PageSection>
         <v-row align="center" justify="center">
           <DownloadButtonFlavorImage class="mr-10" />
-          <v-btn
-            color="#9b59c8"
-            x-large
-            @click="dialogs.download.display = true"
-          >
-            Download
-          </v-btn>
+          <DownloadDialog v-model="showDownloadDialog" />
         </v-row>
-        <DownloadDialog :display.sync="dialogs.download.display" />
       </PageSection>
       <PageSection title="Installation">
         <v-card>
           <v-card-text class="text-body-1">
-            <ol class="mb-4">
+            <ol class="installation-steps mb-4">
               <li>
                 Download the version of Dustmod suitable for your installation
                 of Dustforce
@@ -56,10 +52,8 @@
                 already installed
               </li>
             </ol>
-            <h5 class="mb-4 text-center text-h5">
-              Adding Dustmod to Steam
-            </h5>
-            <ol>
+            <h5 class="mb-4 text-center text-h5">Adding Dustmod to Steam</h5>
+            <ol class="installation-steps">
               <li>
                 In Steam, navigate to
                 <kbd>Games -> Add a Non-Steam Game to My Library</kbd>
@@ -79,7 +73,9 @@
         <v-card>
           <v-card-text class="text-body-1">
             <div class="mb-4">
-              {{ supportText }}
+              If you need any assistance installing or troubleshooting Dustmod
+              please feel free to click the button below to join the Dustforce
+              Discord server for help.
             </div>
             <div class="text-center">
               <v-btn
@@ -88,11 +84,7 @@
                 max-width="100%"
                 rel="noopener"
                 target="_blank"
-                :x-large="$vuetify.breakpoint.smAndUp"
               >
-                <v-icon class="mr-4">
-                  mdi-discord
-                </v-icon>
                 Join the Dustforce Discord Server
               </v-btn>
             </div>
@@ -100,7 +92,7 @@
         </v-card>
       </PageSection>
       <v-footer>
-        <v-row justify="center">
+        <v-row class="py-2" justify="center">
           &copy; Christopher Fimbel {{ new Date().getFullYear() }}
         </v-row>
       </v-footer>
@@ -108,58 +100,50 @@
   </v-app>
 </template>
 
-<script>
-import DownloadButtonFlavorImage from "./components/DownloadButtonFlavorImage.vue";
-import DownloadDialog from "./components/DownloadDialog.vue";
-import HeroImageSlider from "./components/HeroImageSlider.vue";
-import images from "./assets/hero_images/index";
+<script setup lang="ts">
+import { computed, type ComputedRef, ref, useTemplateRef } from "vue";
+import { useDisplay } from "vuetify";
+
+import { images } from "./assets/hero_images/index";
 import PageSection from "./components/PageSection.vue";
 
-export default {
-  name: "App",
+const headerRef = useTemplateRef("header");
 
-  components: {
-    DownloadButtonFlavorImage,
-    DownloadDialog,
-    HeroImageSlider,
-    PageSection,
-  },
+const { mdAndDown } = useDisplay();
 
-  data() {
-    return {
-      aboutText:
-        "Dustmod is a hobby project that came as a natural extension to dustkid.com, a website that I operate that collects all sorts of Dustforce related statistics. While integrating dustkid.com curated leaderboards into Dustmod and extending the replay system to give richer metadata was an initial goal, the project has expanded to include quite a variety of extended functionality on top of the base game. It's my hope that Dustmod continues to be a way to launch deep into the nearly unlimited content that Dustforce and the surrounding community offers.",
-      config: {
-        HERO_IMAGES: images,
-      },
-      dialogs: {
-        download: {
-          display: false,
-        },
-      },
-      supportText:
-        "If you need any assistance installing or troubleshooting Dustmod please feel free to click the button below to join the Dustforce Discord server for help.",
-    };
-  },
+const showDownloadDialog = ref(false);
 
-  computed: {
-    /** @type {number} */
-    heroImageMaxHeight() {
-      return this.$vuetify.breakpoint.lgAndUp
-        ? window.innerHeight - 64
-        : undefined;
-    },
-  },
-};
+const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
+  if (headerRef.value === null) {
+    return 0;
+  } else if (mdAndDown.value) {
+    return undefined;
+  }
+
+  const height = headerRef.value.height;
+  const heightAsNumber =
+    typeof height === "number" ? height : parseInt(height, 10);
+
+  return window.innerHeight - heightAsNumber;
+});
+
+function onDownloadClick() {
+  showDownloadDialog.value = true;
+}
 </script>
 
 <style lang="scss">
-#app {
-  .v-app-bar {
-    h1 {
-      font-family: Caracteres, sans-serif;
-      letter-spacing: 1px;
-    }
-  }
+@font-face {
+  font-family: "Caracteres";
+  src: url("@/assets/Caracteres L1.ttf") format("truetype");
+}
+
+.heading {
+  font-family: Caracteres, sans-serif;
+  letter-spacing: 1px;
+}
+
+.installation-steps {
+  list-style-position: inside;
 }
 </style>

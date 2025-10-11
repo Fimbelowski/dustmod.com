@@ -1,25 +1,29 @@
 <template>
-  <section id="hero-image-slider">
+  <section
+    class="hero-image-slider"
+    :style="maxHeight === undefined ? undefined : { height: `${maxHeight}px` }"
+  >
     <v-container class="ma-0 pa-0" fluid>
       <v-window continuous show-arrows>
         <v-window-item
-          v-for="image in orderedImages"
-          :key="image.name"
+          v-for="{ caption, name, position, src } in images"
+          :key="name"
           eager
-          style="position: relative;"
+          style="position: relative"
         >
           <v-img
+            cover
             eager
             :max-height="maxHeight"
-            :position="image.position"
-            :src="getImageUrlWithContext(image)"
+            :position="position"
+            :src="src"
           />
-          <v-row align-content="center window-item-overlay" class="ma-0">
+          <v-row align-content="center" class="ma-0 window-item-overlay">
             <v-col
               class="text-subtitle-2 text-center"
-              style="font-size: inherit !important;"
+              style="font-size: inherit !important"
             >
-              {{ image.caption }}
+              {{ caption }}
             </v-col>
           </v-row>
         </v-window-item>
@@ -28,42 +32,17 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "HeroImageSlider",
+<script setup lang="ts">
+import { type ImageConfig } from "@/assets/hero_images";
 
-  props: {
-    images: {
-      required: true,
-      type: Array,
-    },
-    maxHeight: {
-      default: undefined,
-      type: [Number, String],
-    },
-  },
-
-  computed: {
-    /** @type {array} */
-    orderedImages() {
-      const images = [...this.images];
-
-      return images.sort((a, b) => a.order - b.order);
-    },
-  },
-
-  methods: {
-    /** @return {string} */
-    getImageUrlWithContext(image) {
-      const images = require.context("../assets/hero_images/", false, /\.png$/);
-      return images(`./${image.name}.png`);
-    },
-  },
-};
+defineProps<{
+  images: ImageConfig[];
+  maxHeight: number;
+}>();
 </script>
 
 <style lang="scss">
-#hero-image-slider {
+.hero-image-slider {
   .window-item-overlay {
     background-color: rgba(0, 0, 0, 0.65);
     bottom: 0;
