@@ -36,16 +36,15 @@
       <PageSection>
         <v-row align="center" justify="center">
           <DownloadButtonFlavorImage class="mr-10" />
-          <v-btn color="#9b59c8" size="x-large"> Download</v-btn>
+          <DownloadDialog v-model="showDownloadDialog" />
         </v-row>
-        <!-- <DownloadDialog :display.sync="dialogs.download.display" /> -->
       </PageSection>
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-import { computed, type ComputedRef, useTemplateRef } from "vue";
+import { computed, type ComputedRef, ref, useTemplateRef } from "vue";
 import { useDisplay } from "vuetify";
 
 import { images } from "./assets/hero_images/index";
@@ -54,6 +53,8 @@ import PageSection from "./components/PageSection.vue";
 const headerRef = useTemplateRef("header");
 
 const { lgAndUp } = useDisplay();
+
+const showDownloadDialog = ref(false);
 
 const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
   if (headerRef.value === null) {
@@ -66,6 +67,10 @@ const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
 
   return lgAndUp ? window.innerHeight - heightAsNumber : undefined;
 });
+
+function onDownloadClick() {
+  showDownloadDialog.value = true;
+}
 </script>
 
 <style lang="scss">
