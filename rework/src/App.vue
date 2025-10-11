@@ -39,6 +39,36 @@
           <DownloadDialog v-model="showDownloadDialog" />
         </v-row>
       </PageSection>
+      <PageSection title="Installation">
+        <v-card>
+          <v-card-text class="text-body-1">
+            <ol class="installation-steps mb-4">
+              <li>
+                Download the version of Dustmod suitable for your installation
+                of Dustforce
+              </li>
+              <li>
+                Unpack the contained files into the directory where Dustforce is
+                already installed
+              </li>
+            </ol>
+            <h5 class="mb-4 text-center text-h5">Adding Dustmod to Steam</h5>
+            <ol class="installation-steps">
+              <li>
+                In Steam, navigate to
+                <kbd>Games -> Add a Non-Steam Game to My Library</kbd>
+              </li>
+              <li>
+                Find the Dustmod executable (typically at
+                <kbd>
+                  C:\Program Files
+                  (x86)\Steam\steamapps\common\Dustforce\dustmod.exe </kbd
+                >)
+              </li>
+            </ol>
+          </v-card-text>
+        </v-card>
+      </PageSection>
     </v-main>
   </v-app>
 </template>
@@ -82,5 +112,9 @@ function onDownloadClick() {
 .heading {
   font-family: Caracteres, sans-serif;
   letter-spacing: 1px;
+}
+
+.installation-steps {
+  list-style-position: inside;
 }
 </style>
