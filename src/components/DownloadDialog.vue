@@ -47,6 +47,7 @@
           <v-spacer />
           <v-btn text @click="isActive.value = false"> Cancel </v-btn>
           <v-btn
+            @click="onDownloadButtonClick"
             color="#9b59c8"
             :disabled="downloadButtonDisabled"
             :href="`https://dustkid.com/getdustmod/${os}${architecture}${graphics ?? ''}_${platform}`"
@@ -56,6 +57,39 @@
           </v-btn>
         </v-card-actions>
       </v-card>
+      <v-dialog
+        @update:model-value="onWarningDialogModelValueChange"
+        v-model="showWarningDialog"
+        width="500"
+      >
+        <v-card>
+          <v-card-title> Warning! </v-card-title>
+          <v-card-text class="align-center d-flex flex-column ga-4">
+            <v-icon color="red" size="75">mdi-alert</v-icon>
+            <p>
+              You are about to walk into a very common pitfall when downloading
+              Dustmod!
+            </p>
+            <p>
+              Please make sure the architecture you have selected matches your
+              <b>Steam installation</b>! This is very likely 32-bit even if your
+              machine is 64-bit.
+            </p>
+            <p>
+              Only proceed with this download if you are absolutely certain that
+              you have a 64-bit installation of Steam.
+            </p>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn @click="onGoBack">Go Back</v-btn>
+            <v-btn
+              color="red"
+              :href="`https://dustkid.com/getdustmod/${os}${architecture}${graphics ?? ''}_${platform}`"
+              >Download Anyway</v-btn
+            >
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </template>
   </v-dialog>
 </template>
@@ -125,6 +159,8 @@ const graphics = ref<string | null>(null);
 const os = ref<string | null>(null);
 const platform = ref<string | null>(null);
 
+const showWarningDialog = ref(false);
+
 const architectureSelectDisabled = computed(() => {
   if (os.value !== "win") {
     return true;
@@ -148,6 +184,24 @@ function handleOsChange(event: string) {
   graphics.value = null;
   platform.value = null;
   os.value = event;
+}
+
+function onDownloadButtonClick(event: MouseEvent) {
+  if (architecture.value === "64" && platform.value === "steam") {
+    event.preventDefault();
+    showWarningDialog.value = true;
+  }
+}
+
+function onGoBack() {
+  showWarningDialog.value = false;
+  architecture.value = null;
+}
+
+function onWarningDialogModelValueChange(updatedModelValue: boolean) {
+  if (!updatedModelValue) {
+    onGoBack();
+  }
 }
 
 const platformSelectDisabled = computed(() => {
