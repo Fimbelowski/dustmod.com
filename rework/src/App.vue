@@ -109,20 +109,22 @@ import PageSection from "./components/PageSection.vue";
 
 const headerRef = useTemplateRef("header");
 
-const { lgAndUp } = useDisplay();
+const { mdAndDown } = useDisplay();
 
 const showDownloadDialog = ref(false);
 
 const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
   if (headerRef.value === null) {
     return 0;
+  } else if (mdAndDown.value) {
+    return undefined;
   }
 
   const height = headerRef.value.height;
   const heightAsNumber =
     typeof height === "number" ? height : parseInt(height, 10);
 
-  return lgAndUp ? window.innerHeight - heightAsNumber : undefined;
+  return window.innerHeight - heightAsNumber;
 });
 
 function onDownloadClick() {

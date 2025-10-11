@@ -1,5 +1,8 @@
 <template>
-  <section class="hero-image-slider" :style="{ height: `${maxHeight}px` }">
+  <section
+    class="hero-image-slider"
+    :style="maxHeight === undefined ? undefined : { height: `${maxHeight}px` }"
+  >
     <v-container class="ma-0 pa-0" fluid>
       <v-window continuous show-arrows>
         <v-window-item
