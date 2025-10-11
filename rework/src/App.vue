@@ -69,6 +69,28 @@
           </v-card-text>
         </v-card>
       </PageSection>
+      <PageSection title="Support">
+        <v-card>
+          <v-card-text class="text-body-1">
+            <div class="mb-4">
+              If you need any assistance installing or troubleshooting Dustmod
+              please feel free to click the button below to join the Dustforce
+              Discord server for help.
+            </div>
+            <div class="text-center">
+              <v-btn
+                color="#9b59c8"
+                href="https://discord.gg/4F9WQeV"
+                max-width="100%"
+                rel="noopener"
+                target="_blank"
+              >
+                Join the Dustforce Discord Server
+              </v-btn>
+            </div>
+          </v-card-text>
+        </v-card>
+      </PageSection>
     </v-main>
   </v-app>
 </template>
