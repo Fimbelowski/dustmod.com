@@ -51,6 +51,8 @@
             color="#9b59c8"
             :disabled="downloadButtonDisabled"
             :href="`https://dustkid.com/getdustmod/${os}${architecture}${graphics ?? ''}_${platform}`"
+            rel="noopener noreferrer"
+            target="_blank"
             text
           >
             Download

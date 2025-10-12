@@ -82,7 +82,7 @@
                 color="#9b59c8"
                 href="https://discord.gg/4F9WQeV"
                 max-width="100%"
-                rel="noopener"
+                rel="noopener roreferrer"
                 target="_blank"
               >
                 Join the Dustforce Discord Server
