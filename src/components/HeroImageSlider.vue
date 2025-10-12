@@ -6,7 +6,7 @@
     <v-container class="ma-0 pa-0" fluid>
       <v-window continuous show-arrows>
         <v-window-item
-          v-for="{ caption, name, position, src } in images"
+          v-for="{ caption, name, position, src } in HERO_IMAGES"
           :key="name"
           eager
           style="position: relative"
@@ -33,10 +33,9 @@
 </template>
 
 <script setup lang="ts">
-import { type ImageConfig } from "@/assets/hero_images";
+import { HERO_IMAGES } from "@/assets/hero_images";
 
 defineProps<{
-  images: ImageConfig[];
   maxHeight: number;
 }>();
 </script>

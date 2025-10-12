@@ -5,7 +5,7 @@
         <v-img class="mr-4" max-width="40" src="./assets/apple.png" />
         <h1 class="heading">DUSTMOD</h1>
       </v-app-bar>
-      <HeroImageSlider :images="images" :max-height="heroImageMaxHeight" />
+      <HeroImageSlider :max-height="heroImageMaxHeight" />
       <PageSection title="What is Dustmod?">
         <v-card>
           <v-card-text>
@@ -104,7 +104,6 @@
 import { computed, type ComputedRef, ref, useTemplateRef } from "vue";
 import { useDisplay } from "vuetify";
 
-import { images } from "./assets/hero_images/index";
 import PageSection from "./components/PageSection.vue";
 
 const headerRef = useTemplateRef("header");
