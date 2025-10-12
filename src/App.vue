@@ -125,10 +125,6 @@ const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
 
   return window.innerHeight - heightAsNumber;
 });
-
-function onDownloadClick() {
-  showDownloadDialog.value = true;
-}
 </script>
 
 <style lang="scss">
