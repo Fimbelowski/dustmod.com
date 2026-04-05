@@ -103,7 +103,7 @@
                     If you are on a Steam Deck, first switch to <strong>Desktop Mode</strong>.
                   </li>
                   <li>
-                    Download the Dustmod version suitable for <strong>Linux</strong>, typically <strong>64-bit</strong>
+                    Download the Dustmod version suitable for <strong>Linux</strong>, typically <strong>64-bit</strong> Steam
                   </li>
                   <li>
                     <a href="https://drive.google.com/file/d/1axbQj6Twr91mKwgdtV-jTIfMQGMpgEGf/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download the required dependencies</a> (this zip contains <code>steam_appid.txt</code> and <code>libidn.so.11</code>).
@@ -147,11 +147,11 @@
                   First, install Dustforce via Steam as you normally would.
                 </p>
 
-                <h5 class="mb-4 text-h5">Method 1 - Install Script (Recommended)</h5>
+                <h5 class="mb-4 text-h5">Method 1 - Install Script</h5>
                 <ol class="installation-steps mb-4">
-                  <li>Download Dustmod, and keep it in your default <strong>Downloads</strong> folder.</li>
+                  <li>Download Dustmod and keep it in your default <strong>Downloads</strong> folder.</li>
                   <li>
-                    <a href="https://discord.gg/4F9WQeV" download>Download the install script</a>, open the zip file, and run the resulting <code>.command</code> script.
+                    <a href="https://drive.google.com/file/d/1SeButPOi5js3NkAOPDuXYHYim-kPuwqd/view?usp=sharing" download>Download the install script</a>, open the zip file, and run the resulting <code>.command</code> script. (Open with <v-icon size="small">mdi-chevron-right</v-icon> <strong>Terminal</strong> application)
                   </li>
                   <li>Done. Run Dustforce through Steam as you normally would.</li>
                 </ol>
