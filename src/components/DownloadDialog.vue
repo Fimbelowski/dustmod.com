@@ -16,7 +16,7 @@
             item-title="title"
             item-value="value"
             label="Operating System"
-            :value="os"
+            :model-value="os"
           />
           <v-select
             v-model="graphics"
