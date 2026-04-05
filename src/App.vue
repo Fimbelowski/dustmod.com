@@ -39,16 +39,17 @@
           <DownloadDialog v-model="showDownloadDialog" />
         </v-row>
       </PageSection>
-      <PageSection title="Installation">
+      <PageSection id="installation" title="Installation">
         <v-card>
           <v-tabs
             v-model="tab"
             align-tabs="center"
             color="#9b59c8"
+            @update:model-value="updateUrlHash"
           >
-            <v-tab value="windows">Windows</v-tab>
-            <v-tab value="linux">Linux</v-tab>
-            <v-tab value="osx">OSX</v-tab>
+            <v-tab value="windows" @click="scrollToInstallation">Windows</v-tab>
+            <v-tab value="linux" @click="scrollToInstallation">Linux</v-tab>
+            <v-tab value="osx" @click="scrollToInstallation">OSX</v-tab>
           </v-tabs>
 
           <v-card-text class="text-body-1 mt-4">
@@ -97,7 +98,7 @@
                   Linux installation instructions courtesy of maybetta.
                 </p>
 
-                <h5 class="mb-4 text-h5">Steam Deck & Arch Linux Installation</h5>
+                <h5 class="mb-4 text-h5">Steam Deck & Linux Installation</h5>
                 <ol class="installation-steps mb-4">
                   <li>
                     If you are on a Steam Deck, first switch to <strong>Desktop Mode</strong>.
@@ -219,7 +220,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, type ComputedRef, ref, useTemplateRef } from "vue";
+import { computed, type ComputedRef, ref, useTemplateRef, onMounted } from "vue";
 import { useDisplay } from "vuetify";
 
 import PageSection from "./components/PageSection.vue";
@@ -230,6 +231,48 @@ const { mdAndDown } = useDisplay();
 
 const showDownloadDialog = ref(false);
 const tab = ref("windows");
+
+
+
+function scrollToInstallation() {
+  setTimeout(() => {
+    const section = document.getElementById("installation");
+    if (!section) return;
+    const rect = section.getBoundingClientRect();
+    const height = headerRef.value?.height ?? 64;
+    const headerHeight = typeof height === "number" ? height : parseInt(height, 10);
+    
+    const targetOffset = headerHeight + 24;
+
+    if (rect.top > targetOffset) {
+      window.scrollTo({
+        top: window.scrollY + rect.top - targetOffset,
+        behavior: "smooth"
+      });
+    }
+  }, 50);
+}
+
+onMounted(() => {
+  const hash = window.location.hash.replace("#", "");
+  const validTabs = ["windows", "linux", "osx"];
+
+  if (validTabs.includes(hash)) {
+    tab.value = hash;
+
+    setTimeout(() => {
+          scrollToInstallation();
+        }, 100);
+  }
+});
+
+function updateUrlHash(newTab: string | unknown) {
+  if (typeof newTab === 'string') {
+    window.history.replaceState(null, "", `#${newTab}`);
+
+    scrollToInstallation();
+  }
+}
 
 const heroImageMaxHeight: ComputedRef<number | undefined> = computed(() => {
   if (headerRef.value === null) {
