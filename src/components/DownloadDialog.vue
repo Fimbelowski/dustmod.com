@@ -16,7 +16,7 @@
             item-title="title"
             item-value="value"
             label="Operating System"
-            :value="os"
+            :model-value="os"
           />
           <v-select
             v-model="graphics"
@@ -189,7 +189,7 @@ function handleOsChange(event: string) {
 }
 
 function onDownloadButtonClick(event: MouseEvent) {
-  if (architecture.value === "64" && platform.value === "steam") {
+  if (os.value === "win" && architecture.value === "64" && platform.value === "steam") {
     event.preventDefault();
     showWarningDialog.value = true;
   }
